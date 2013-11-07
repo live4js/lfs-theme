@@ -18,7 +18,7 @@
             <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}jquery/jquery.jgrowl.css" />
             <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}yui/reset-fonts.css">
             <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/main.css" />
-	    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap.min.css" />
+	    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap.css" />
         {% endcompress %}
 
         <!--[if IE]>
@@ -45,7 +45,7 @@
 	<div id="header">
 		<div class="row">
 		{% block header %}
-		<div class="span4">
+		<div id="logo" class="span4">
 			<a href="{% url "lfs.core.views.shop_view" %}">
 				<img class="logo" src="{{ STATIC_URL }}img/logo.png" alt="Logo" />
 			</a>
@@ -108,13 +108,13 @@
 			{% block tabs %}
 				{% tabs %}
 			{% endblock %}
-        </div>
+        	</div>
 	<!-- tabs end -->
 
 	<!--Main content -->
 		<div id="content">
-			<div class="container-fluid">
-				<div class="row-fluid">
+			<div class="container">
+				<div class="row">
 			{% slots_information %}
 				{% block wrapper %}
 					{% block left-slot-wrapper %}

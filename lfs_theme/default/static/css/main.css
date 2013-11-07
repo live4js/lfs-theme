@@ -338,7 +338,7 @@ table.search-results {
 #tabs {
 	background: -moz-linear-gradient(center top , #FFFFFF, #e3eaf8);
 	background: -webkit-linear-gradient(top, white, #e3eaf8);
-	height: 34px;
+	/*height: 34px;*/
 	box-shadow: 1px 1px 1px #ddd;
 	padding-left: 10px;
 	border-radius: 5px;
@@ -395,7 +395,7 @@ ul.breadcrumbs li {
 	background-color: #ffffff;
 	border-radius: 5px 5px 0 0;
 	margin: 10px auto 0;
-	width: 1170px;
+	/*width: 1170px;*/
 }
 
 .left-slot {
