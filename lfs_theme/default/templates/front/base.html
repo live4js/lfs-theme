@@ -17,8 +17,9 @@
             <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}jquery/lightbox/jquery.lightbox-0.5.css" />
             <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}jquery/jquery.jgrowl.css" />
             <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}yui/reset-fonts.css">
+ 	    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap.css" />
             <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/main.css" />
-	    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap.css" />
+	    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/custom.css" />
         {% endcompress %}
 
         <!--[if IE]>
@@ -45,24 +46,24 @@
 	<div id="header">
 		<div class="row">
 		{% block header %}
-		<div id="logo" class="span4">
+		<div id="logo" class="col-md-6">
 			<a href="{% url "lfs.core.views.shop_view" %}">
 				<img class="logo" src="{{ STATIC_URL }}img/logo.png" alt="Logo" />
 			</a>
 		</div>
-		<div class="span4 offset4">
-			<div class="btn-group pull-right">
-				<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+		<div id="login" class="col-md-2">
+			<div class="btn btn-default pull-right">
+				<a data-toggle="dropdown" href="#">
 					<i class="icon-user"></i> {% if user.is_authenticated %}
                             {% if user.first_name %}
                                 <span>{{ user.first_name }} {{user.last_name}}</span>
                             {% else %}
                                 <span>{{ user.username }}</span>
                             {% endif %}
-								  <span class="caret"></span>
-								</a>
-								<ul class="dropdown-menu">
-									{% if user.is_superuser %}
+				<span class="caret"></span>
+				</a>
+						<ul class="dropdown-menu">
+							{% if user.is_superuser %}
                                 {% if category %}
                                     <li><a href="{% url "lfs_manage_category" category.id %}">{% trans 'Manage' %}</a></li>
                                 {% endif %}
@@ -90,12 +91,17 @@
 
 								</ul>
 			</div>
+		</div>
+
+		<div id="search" class="col-md-4">
 			<form id="search-form" action="{% url "lfs_search" %}" autocomplete="off">
 				<input type="hidden" name="livesearch" value="1" />
 				<input id="search-input" type="text" name="q" autocomplete="off" data-url="{% url "lfs_livesearch" %}" placeholder="{% trans 'Search' %}" />
 				<input type="submit" value="{% trans 'Go!' %}" class="btn"/>
 			</form>
+
 		</div>
+
 		<div class="container livesearch-wrapper">
                  <div id="livesearch-result"></div>
 		</div>
