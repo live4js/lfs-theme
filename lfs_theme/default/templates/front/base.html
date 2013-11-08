@@ -93,11 +93,13 @@
 			</div>
 		</div>
 
-		<div id="search" class="col-md-4">
-			<form id="search-form" action="{% url "lfs_search" %}" autocomplete="off">
+		<div id="search" class="col-md-5">
+			<form id="search-form" class="navbar-form navbar-left" role="search" action="{% url "lfs_search" %}" autocomplete="off">
+				<div class="form-group" >
 				<input type="hidden" name="livesearch" value="1" />
-				<input id="search-input" type="text" name="q" autocomplete="off" data-url="{% url "lfs_livesearch" %}" placeholder="{% trans 'Search' %}" />
-				<input type="submit" value="{% trans 'Go!' %}" class="btn"/>
+				<input id="search-input" class="form-control" type="text" name="q" autocomplete="off" data-url="{% url "lfs_livesearch" %}" placeholder="{% trans 'Search' %}" />
+				</div>
+				<input type="submit" value="{% trans 'Go!' %}" class="btn btn-default"/>
 			</form>
 
 		</div>
