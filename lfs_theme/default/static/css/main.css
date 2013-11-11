@@ -379,14 +379,17 @@ table.search-results {
 }
 
 /* Breadcrumbs */
-ul.breadcrumbs {
-    list-style-type: none;
-    padding: 10px 0 10px 0;
-    margin:0;
+
+.breadcrumbs {
+	background-color: #F5F5F5;
+	border-radius: 4px;
+	list-style: none outside none;
+	margin-bottom 20px;
+	padding: 8px 15px;
 }
 
-ul.breadcrumbs li {
-    display: inline;
+.breadcrumbs > li {
+	display:inline;
 }
 
 /* Content ################################################################# */

@@ -12,6 +12,8 @@
         {% block head %}{% endblock %}
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
         <meta name="generator" content="SpringShop - http://springshop.ro" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
         {% compress css %}
             <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}jquery/lightbox/jquery.lightbox-0.5.css" />
@@ -120,27 +122,30 @@
 	<!-- tabs end -->
 
 	<!--Main content -->
-		<div id="content">
-			<div class="container">
-				<div class="row">
+	<div id="content">
+		<div class="container">
+			<div class="row">
 			{% slots_information %}
 				{% block wrapper %}
 					{% block left-slot-wrapper %}
 							{% if SlotLeft %}
-										<div class="span2">
-										{% block left-slot %}
-											{% lfs_portlet_slot 'Left' %}
-										{% endblock %}
-										</div>
-                        {% endif %}
-                    {% endblock %}
+				<div id="Left" class="col-md-2">
+					{% block left-slot %}
+						{% lfs_portlet_slot 'Left' %}
+					{% endblock %}
+				</div>
+                        	{% endif %}
+                    	{% endblock %}
 				
-					<div id="breadcrumbs" class="span10 offset10">
+			<div id="Center" class="col-md-8">	
+
+					<div id="breadcrumbs">
 						{% block breadcrumbs %}{% endblock %}	
 					</div>
+					
 						  
 					<!-- <div class="{{ content_class }}"> -->
-					<div class="span8">
+					<div id="content">
 						{% block content %}{% endblock %}
 					
 					{% block center-slot-wrapper %}
@@ -150,13 +155,15 @@
 											{% lfs_portlet_slot 'Center' %}
 										{% endblock %}
 										
-                        {% endif %}
-                    {% endblock %}
+                        				{% endif %}
+                    			{% endblock %}
 					</div>
-                    <!-- </div> -->
+                    			<!-- </div> -->
+			</div>
+
                     {% block right-slot-wrapper %}
                         {% if SlotRight %}
-					<div class="span2">
+					<div id="Right" class="col-md-2">
 						<div class="right-slot">
 							{% block right-slot %}
 								{% lfs_portlet_slot 'Right' %}
