@@ -129,7 +129,7 @@
 				{% block wrapper %}
 					{% block left-slot-wrapper %}
 							{% if SlotLeft %}
-				<div id="Left" class="col-md-2">
+				<div id="left" class="col-md-2">
 					{% block left-slot %}
 						{% lfs_portlet_slot 'Left' %}
 					{% endblock %}
@@ -137,7 +137,7 @@
                         	{% endif %}
                     	{% endblock %}
 				
-			<div id="Center" class="col-md-8">	
+			<div id="center" class="col-md-8">	
 
 					<div id="breadcrumbs">
 						{% block breadcrumbs %}{% endblock %}	
@@ -163,7 +163,7 @@
 
                     {% block right-slot-wrapper %}
                         {% if SlotRight %}
-					<div id="Right" class="col-md-2">
+					<div id="right" class="col-md-2">
 						<div class="right-slot">
 							{% block right-slot %}
 								{% lfs_portlet_slot 'Right' %}

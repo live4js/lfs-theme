@@ -24,34 +24,80 @@
 	text-decoration: none;		
 }
 
-/* Categories
+/* Left and Right 
 ----------------------------------*/
 
-#Left {
+#left {
 	padding-left: 0px;
 	padding-right: 0px; 
 }
 
-#Right {
+#right {
 	padding-left: 0px;
 	padding-right: 0px; 
 }
 
+/* Main Nav
+----------------------------------*/
+
+#tabs { }
+
+#tabs .nav li a:hover, #tabs .nav li a:hover {  
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(225,225,225,1) 37%, rgba(241,241,241,1) 65%, rgba(246,246,246,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(37%,rgba(225,225,225,1)), color-stop(65%,rgba(241,241,241,1)), color-stop(100%,rgba(246,246,246,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(225,225,225,1) 37%,rgba(241,241,241,1) 65%,rgba(246,246,246,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(225,225,225,1) 37%,rgba(241,241,241,1) 65%,rgba(246,246,246,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(225,225,225,1) 37%,rgba(241,241,241,1) 65%,rgba(246,246,246,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(225,225,225,1) 37%,rgba(241,241,241,1) 65%,rgba(246,246,246,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+}
+
+/* Categories
+----------------------------------*/
+.categories-portlet {
+
+}
+
+.categories-portlet .portlet-header {
+	border-radius: 5px 5px 0 0;
+} 
+
+.categories-portlet .portlet-body .root {
+	border-top: 0px solid #dddddd;
+	border-left: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+	margin-top: -4px;
+}
+
+.categories-portlet .portlet-body ul li ul {
+	
+}
+
+.categories-portlet .portlet-body li ul li {
+	background: url("../img/arrow.png") no-repeat scroll 0 4px rgba(0, 0, 0, 0);
+	padding-left: 15px;
+}
 
 
+/* Pages
+----------------------------------*/
+.pages-portlet .portlet-body {
+	border-left: 1px solid #DDD;
+	border-right: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+	margin-top: -4px;
+	padding-bottom: 4px;
+}
 
+.pages-portlet .portlet-header { 
+	border-radius: 5px 5px 0 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.pages-portlet .portlet-body a {
+	padding-left: 15px;
+}
 
 
 
