@@ -42,18 +42,28 @@
         {% endcompress %}
 
     </head>
+
     <body class="{% block section %}lfs{% endblock %}">
 	<div class="container">
 	<!-- header begins -->
 	<div id="header">
-		<div class="row">
-		{% block header %}
-		<div id="logo" class="col-md-6">
-			<a href="{% url "lfs.core.views.shop_view" %}">
-				<img class="logo" src="{{ STATIC_URL }}img/logo.png" alt="Logo" />
-			</a>
-		</div>
-		<div id="login" class="col-md-2">
+	{% block header %}
+
+		<div id="top-menu" class="row">
+
+			<div id="search" class="col-md-11">
+				<form id="search-form" class="navbar-form navbar-right" role="search" action="{% url "lfs_search" %}" autocomplete="off">
+					<div class="form-group" >
+					<input type="hidden" name="livesearch" value="1" />
+					<input id="search-input" class="form-control" type="text" name="q" autocomplete="off" data-url="{% url "lfs_livesearch" %}" placeholder="{% trans 'Search' %}" />
+					</div>
+					<input type="submit" value="{% trans 'Go!' %}" class="btn btn-default"/>
+				</form>
+
+			</div>
+
+		<!-- Login -->
+		<div id="login" class="col-md-1">
 			<div class="btn btn-default pull-right">
 				<a data-toggle="dropdown" href="#">
 					<i class="icon-user"></i> {% if user.is_authenticated %}
@@ -81,9 +91,9 @@
                                 
                             {% endif %}
 						
-								<li class="divider"></li>
-								<li><a href="/logout">{% trans 'Logout' %}</a></li>
-								<li><a href="{% url "lfs_my_account" %}">{% trans 'My account' %}</a></li>
+						<li class="divider"></li>
+						<li><a href="/logout">{% trans 'Logout' %}</a></li>
+						<li><a href="{% url "lfs_my_account" %}">{% trans 'My account' %}</a></li>
                         {% else %}
                             {% if not ANON_ONLY %}
                                 <a href="{% url "lfs_login" %}">{% trans 'Login' %}</a>
@@ -94,25 +104,26 @@
 								</ul>
 			</div>
 		</div>
+		<!-- Login ends -->
+		</div>	
 
-		<div id="search" class="col-md-5">
-			<form id="search-form" class="navbar-form navbar-left" role="search" action="{% url "lfs_search" %}" autocomplete="off">
-				<div class="form-group" >
-				<input type="hidden" name="livesearch" value="1" />
-				<input id="search-input" class="form-control" type="text" name="q" autocomplete="off" data-url="{% url "lfs_livesearch" %}" placeholder="{% trans 'Search' %}" />
-				</div>
-				<input type="submit" value="{% trans 'Go!' %}" class="btn btn-default"/>
-			</form>
-
+		<div class="row">
+		<div id="logo" class="col-md-12">
+			<a href="{% url "lfs.core.views.shop_view" %}">
+				<img class="logo" src="{{ STATIC_URL }}img/logo.png" alt="Logo" />
+			</a>
 		</div>
 
 		<div class="container livesearch-wrapper">
                  <div id="livesearch-result"></div>
 		</div>
-		 {% endblock %}
 		</div>
+
+		{% endblock %}
 	</div>
 	<!-- header ends -->
+
+
 	<!-- tabs begin -->
 		<div id="tabs">
 			{% block tabs %}
