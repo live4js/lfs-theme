@@ -1,41 +1,85 @@
+/* Container
+-------------------------------*/
+#wrapper { 
+	padding: 0px;
+	border-left: 0px solid #DDD;
+	border-right: 0px solid #DDD;
+	box-shadow: 0px 2px 10px #CCC;
+}
+
 /* Header
 -------------------------------*/
-#header .row {
-	width: 100%;
+
+#header { 
+	background: #0066AA;
 }
 
 /* Top Menu
 -------------------------------*/
 #top-menu {
-	background-color: #FFF;
-	border-bottom: 2px solid #DDD;
+	border-bottom: 1px solid #0055AA;
+	box-shadow: 0 1px 0 rgba(255,255,255,.1);
+}
+
+#top-menu #login {
+	margin: 0 auto;
+	padding: 0px;
 }
 
 /* Login Button
 --------------------------------*/
 #login {
 	position: relative;
-	z-index: 1;
-	margin-top: 7px;		
+	z-index: 1;		
 }
 
 #login a:hover {
 	text-decoration: none;		
 }
 
-/*Search
-----------------------------------*/
-#search { 
-	position: relative;
-	z-index: 1;
+#login .btn-default {
+	background: transparent;	
+	border: 0px solid #FFF;	
+	color: #FFF;
+	padding: 4px 10px;
+	margin-right: 4px; 
 }
 
-#search #search-input {
+#login .btn-default a {
+	color: #FFFFFF;	
+}
+
+#login .btn-default a:hover {
+	color: #FFFFFF;	
+}
+
+#login .btn-default li a {
+	color: #0066AA;
+}
+
+#login .btn-default li:hover a {
+	color: #0066AA;
+}
+
+#login .dropdown-menu {
+	top: 0%;
+	border-radius: 0;
+	margin-right: -1px;
+	margin-top: 3%;
+}
+
+/*Search
+----------------------------------*/
+#search-form { 
+
+}
+
+#search-form #search-input {
 	width: 80%; 
 	float-right;
 }
 
-#search .btn {
+#search-form .btn {
 	margin-left: -50px;
 }
 
