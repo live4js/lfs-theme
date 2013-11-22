@@ -8,8 +8,8 @@
       method="post">
     {% csrf_token %}
 
-<div class="row-fluid">	
-	<div class="span6">
+<div class="row">	
+	<div class="col-md-5">
     {# Images #}
     <div class="product-images">
         <div class="main-image">
@@ -33,6 +33,11 @@
             {% endfor %}
         </div>
     </div>
+
+
+	</div>
+
+	<div class="col-md-7">
 
     <h1 class="product-title">
         {{ product.get_name }}
@@ -74,8 +79,7 @@
 
     {% shipping product %}
     {% average_for_instance product %}
-	</div>
-	<div class="span6">
+
     {# Prices #}
     <div class="prices">
         {% if for_sale %}
@@ -186,7 +190,7 @@
                         <div class="product-quantity packing-unit"
                             id="packing-url"
                             data="{% url "lfs_calculate_packing" product.id %}">
-                            <input class="number quantity span12"
+                            <input class="number quantity col-md-12"
                                    name="quantity"
                                    size="3"
                                    type="text"
@@ -202,7 +206,7 @@
                         {% endif %}
                     </td>
                     <td class="product-quantity">
-                        <input class="number span12"
+                        <input class="number col-md-12"
                                name="quantity"
                                size="3"
                                type="text"
@@ -303,8 +307,8 @@
         </div>
     {% endif %}
 	
-<div class="row-fluid">
-	<div class="span12">
+<div class="row">
+	<div class="col-md-12">
 	<ul class="nav nav-tabs">
 		<li class="active"><a href="#description" data-toggle="tab"> {% trans 'Description' %} </a> </li>
 		 {% if attachments %}

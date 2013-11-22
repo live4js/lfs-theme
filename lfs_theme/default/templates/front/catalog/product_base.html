@@ -50,16 +50,16 @@
 
     {{ product.static_block.html|safe }}
 
-    <div class="row-fluid">
-		<div class="span6">
+    <div class="row">
+		<div class="col-md-4">
 			<div class="overview">
 				{% come_from_page product %}
-				<a href="{{ come_from_page.get_absolute_url }}" class="btn btn-small">
+				<a href="{{ come_from_page.get_absolute_url }}" class="btn btn-default">
 					{% trans 'Back to overview' %}
 				</a>
 			</div>
 		</div>
-		<div class="span6">
+		<div class="col-md-8">
 			{% product_navigation product %}
 		</div>
 		

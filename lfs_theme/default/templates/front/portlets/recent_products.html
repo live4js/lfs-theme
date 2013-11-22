@@ -8,19 +8,19 @@
         </div>
         <div class="portlet-body">
             {% for product in products %}
-            <div class="portlet-item {% if forloop.last %}last{% endif %}">
-                <a href="{{ product.get_absolute_url }}">
+		<div class="portlet-item {% if forloop.last %}last{% endif %}">
+			<a href="{{ product.get_absolute_url }}">
                     {{ product.get_name }}
-                </a>
-            </div>
-			<div class="product-image">
+			</a>
+		</div>
+		<div class="product-image">
                                 <a href="{{ product.get_absolute_url }}">
                                     {% if product.get_image %}
                                         <img alt="{{ product.get_name }}"
                                             src="{{ product.get_image.image.url_100x100 }}" />
                                     {% endif %}
                                 </a>
-                            </div>
+		</div>
             {% endfor %}
         </div>
     </div>
