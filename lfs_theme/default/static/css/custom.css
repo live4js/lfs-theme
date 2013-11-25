@@ -262,3 +262,29 @@
     vertical-align: middle;
     width: 50%;
 }
+
+/* Account
+-------------------------------------*/
+#account .nav-list { 
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #EEEEEE #EEEEEE;
+    border-image: none;
+    border-right: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    margin-top: -5px;
+}
+
+#account .nav-list li { 
+	border-bottom: 1px solid #EEEEEE;
+}
+
+#account .nav-list .last { 
+	border-bottom: 0px solid #EEEEEE;
+        transition: all 0.4s ease 0s;	
+}

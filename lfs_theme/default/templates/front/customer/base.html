@@ -3,8 +3,8 @@
 {% load lfs_tags %}
 
 {% block wrapper %}
-	<div class="row-fluid">
-		<div class="span3">
+	<div id="account" class="row">
+		<div class="col-md-3">
 			{% block left-slot %}
 				<div class="portlet-header">{% trans 'My account' %}</div>
 				<ul class="nav nav-list">
@@ -20,14 +20,14 @@
 					<li>
 						<a href="{% url "lfs_my_profile" %}"><i class="icon-envelope"></i>{% trans 'Change profile' %}</a>
 					</li>
-					<li>
+					<li class="last">
 						<a href="{% url "lfs_my_addresses" %}"><i class="icon-user"></i>{% trans 'Change addresses' %}</a>
 					</li>
 				</ul>
 			{% endblock %}
 		</div>
 	
-    <div class="span9 last">
+    <div class="col-md-9 last">
         {% block content %}{% endblock %}
     </div>
 	</div>
