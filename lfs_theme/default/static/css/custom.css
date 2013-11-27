@@ -100,16 +100,20 @@
 }
 
 
-/* Left and Right 
+/* Left, Right and Center
 ----------------------------------*/
 #left {
-	padding-left: 0px;
+	padding-left: 15px;
 	padding-right: 0px; 
 }
 
 #right {
 	padding-left: 0px;
-	padding-right: 0px; 
+	padding-right: 15px; 
+}
+
+#center #content{
+	padding: 10px 10px 0 10px; 
 }
 
 /* Recent Products */
@@ -151,12 +155,6 @@
 .pages-portlet a:hover {
  	color: #0066BB;
 }
-
-/* Home Page
------------------------------------*/
-.lfs #center #content {
-	padding-left:10px;
-} 
 
 /* Contact Form
 ---------------------------------- */
@@ -227,10 +225,6 @@
 	color: #FFFFFF;
 } 
 
-.customer-login .container {
-	padding-left: 0;
-	padding-right:0;
-}
 .customer-login .page-header {
 	margin: 20px;
 	padding-left: 10px;
@@ -248,7 +242,7 @@
 	padding-right: 20px;
 }
 
-.customer-login .form input {
+.customer-login .form input, .control-group input {
     background-color: #FFFFFF;
     background-image: none;
     border: 1px solid #DDDDDD;
@@ -287,4 +281,112 @@
 #account .nav-list .last { 
 	border-bottom: 0px solid #EEEEEE;
         transition: all 0.4s ease 0s;	
+}
+
+#invoice-address, #shipping-address {
+	padding-left: 0px; 
+}
+
+#invoice-address .control-label, #shipping-address .control-label {
+	margin-right: 10px;
+}
+
+#invoice-address .form-wrapper, #shipping-address .form-wrapper {
+	padding-left:15px;
+}
+
+.btn-address { 
+	float: right;
+    margin-right: 2%;
+    margin-top: 1.5%;
+}
+
+#invoice-address  .form-control, #shipping-address .form-control,
+#cart-inline #voucher {
+    background-color: #FFFFFF;
+    background-image: none;
+    border: 1px solid #DDDDDD;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555555;
+    display: block;
+    font-size: 14px;
+    line-height: 1.42857;
+    padding: 6px 10px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Cart 
+----------------------*/
+#cart-inline {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#cart-inline .btn-success {
+  color: #ffffff !important;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+	transition: all 0.4s ease 0s;
+}
+
+#cart-inline .btn-success:hover,
+#cart-inline .btn-success:focus,
+#cart-inline .btn-success:active,
+#cart-inline .btn-success .active,
+#cart-inline .open .dropdown-toggle .btn-success {
+  color: #ffffff;
+  background-color: #39b3d7;
+  border-color: #269abc;
+}
+
+#cart-form .btn-success {
+	background: none repeat scroll 0 0 #0066AA;
+	color: #FFFFFF;
+	padding: 7px 12px;
+	border: 0;
+	transition: all 0.4s ease 0s;
+} 
+
+#cart-form .btn-success:hover  { 
+	text-decoration: none;
+	background: none repeat scroll 0 0 #2A7FD3;
+	color: #FFFFFF;
+}
+
+.added-to-cart .page-header,
+.added-to-cart #cart-items,
+.added-to-cart .form-actions  {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.added-to-cart .btn-success {
+	background: none repeat scroll 0 0 #0066AA;
+	color: #FFFFFF;
+	padding: 7px 12px;
+	border: 0;
+	transition: all 0.4s ease 0s;
+}
+
+.added-to-cart .btn-success:hover {
+	text-decoration: none;
+	background: none repeat scroll 0 0 #2A7FD3;
+	color: #FFFFFF;
+}
+
+.added-to-cart .default{
+	transition: all 0.4s ease 0s;
+    background-color: #5CB85C;
+	border: 1px solid #5CB85C;
+    border-color: #4CAE4C;
+    color: #FFFFFF;
+
+}
+
+.added-to-cart .default:hover {
+    background-color: #47A447;
+	border: 1px solid #47A447;
+    color: #FFFFFF;
 }

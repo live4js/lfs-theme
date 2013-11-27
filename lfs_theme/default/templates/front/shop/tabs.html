@@ -1,11 +1,11 @@
 {% load i18n %}
-
+<div class="nav-collapse">
     <ul class="nav nav-pills">
         <li>
-            <a href="/">
+		<a href="/">
                 {% trans 'Home' %}
-            </a>                                            
-        </li>
+    		</a>                                            
+	</li>
         {% for tab in tabs %}
             <li {% if tab.selected %}class="selected"{% endif %}>
                 <a href="{{ tab.link }}">
@@ -13,4 +13,14 @@
                 </a>                                
             </li>            
         {% endfor %}
+		
+			<form id="search-form" class="navbar-form navbar-right" role="search" action="{% url "lfs_search" %}" autocomplete="off">
+					<div class="form-group" >
+					<input type="hidden" name="livesearch" value="1" />
+					<input id="search-input" class="form-control" type="text" name="q" autocomplete="off" data-url="{% url "lfs_livesearch" %}" placeholder="{% trans 'Search' %}" />
+					</div>
+					<input type="submit" value="{% trans 'Go!' %}" class="btn btn-default"/>
+			</form>
+		
     </ul>
+</div>

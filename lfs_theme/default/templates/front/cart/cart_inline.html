@@ -2,7 +2,7 @@
 
 		
 {% if cart_items %}
-	<div class="span2">
+	<div class="col-md-2">
     <div class="portlet-header">
         {% trans "Voucher" %}
     </div>
@@ -12,14 +12,14 @@
            name="voucher"
            value="{{ voucher_number }}"
            size="30" 
-		   class="span12" />
+		   class="col-md-12" />
 
    
 	</div>
-	<div class="span10">
+	<div class="col-md-10">
 	{% if voucher_number and voucher_message %}
-		 <div class="row-fluid">
-			<div class="span12">
+		 <div class="row">
+			<div class="col-md-12">
 				<button data-dismiss="alert" class="close" type="button">&times;</button>
 				<div  class="alert alert-info">
 				{{ voucher_message }}
@@ -96,7 +96,7 @@
 
                     </td>
                     <td class="number">
-                        <input class="number cart-amount span6"
+                        <input class="number cart-amount col-md-6"
                                type="text"
                                name="amount-cart-item_{{ cart_item.obj.id }}"
                                size="6"
@@ -293,11 +293,11 @@
             <tr>
                 <td colspan="8">
                     <div class="buttons">
-                        <a class="btn btn-large btn-success"
+                        <a class="btn btn-success"
                            href="{% url "lfs_checkout_dispatcher" %}">
                            {% trans 'Checkout' %}
                         </a>
-                        <a class="btn btn-large btn-info"
+                        <a class="btn default btn-info"
                            href="{{ shopping_url }}">
                             {% trans 'Go on shopping' %}
                         </a>
@@ -313,7 +313,7 @@
         <button data-dismiss="alert" class="close" type="button">&times;</button>
         {% trans 'Your Cart is empty' %}
       </div>
-    <a class="btn btn-success"
+    <a class="btn default btn-success"
        href="{{ shopping_url }}">
        {% trans 'Go on shopping' %}
     </a>

@@ -15,7 +15,7 @@
         {% for col in products %}
         <tr class="product-row">
             {% for product in col %}
-                <td class="product-data"
+              <td class="product-data"
                     onclick="window.location='{% url "lfs.catalog.views.product_view" product.slug %}'">
                     <div class="product-image">
                         <a href="{% url "lfs.catalog.views.product_view" product.slug %}">
@@ -68,8 +68,7 @@
                                 {% trans '*exc. VAT' %}
                             {% endif %}
                         </div>
-						 <a class="btn btn-success"
-                           href="{% url "lfs_product" product.slug %}">{% trans 'Details' %}
+				<a class="btn btn-success" href="{% url "lfs_product" product.slug %}">{% trans 'Details' %}
                         </a>
                     </div>
                     

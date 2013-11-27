@@ -68,15 +68,15 @@
     {% endif %}
 
     <div class="form-actions">
-        <a class="btn btn-large btn-success"
+        <a class="btn btn-success"
            href="{% url "lfs_checkout_dispatcher" %}">
             {% trans 'Checkout' %}
         </a>
-        <a class="btn btn-large btn-primary"
+        <a class="btn default"
            href="{% url "lfs.cart.views.cart" %}">
             {% trans 'Go to cart' %}
         </a>
-        <a class="btn btn-large btn-info"
+        <a class="btn btn-info"
            href="{{ shopping_url }}">
             {% trans 'Go on shopping' %}
         </a>

@@ -580,7 +580,7 @@ h6,
 
 .page-header {
   padding-bottom: 9px;
-  margin: 40px 0 20px;
+  margin: 14px 0 20px;
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -781,8 +781,8 @@ pre code {
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  /*padding-right: 15px;
+  padding-left: 15px;*/
   margin-right: auto;
   margin-left: auto;
 }
@@ -2461,9 +2461,10 @@ fieldset[disabled] .btn-success.active {
 }
 
 .btn-info {
-  color: #ffffff;
+  color: #ffffff !important;
   background-color: #5bc0de;
   border-color: #46b8da;
+	transition: all 0.4s ease 0s;
 }
 
 .btn-info:hover,
