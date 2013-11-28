@@ -8,20 +8,20 @@
       method="post">
     {% csrf_token %}
 
-<div class="row">	
-	<div class="col-md-5">
-    {# Images #}
-    <div class="product-images">
-        <div class="main-image">
-            {% if product.get_image %}
-                <a href="{{ product.get_image.image.url_400x400 }}"
+<div id="product-details" class="row">	
+	<div id="product-img" class="col-md-5">
+	{# Images #}
+	<div class="product-images">
+		<div class="main-image">
+		{% if product.get_image %}
+			<a href="{{ product.get_image.image.url_400x400 }}"
                    class="product-image">
-                    <img src="{{ product.get_image.image.url_200x200 }}"
+			<img src="{{ product.get_image.image.url_200x200 }}"
                          title="{{ product.get_image.title }}"
                          alt="{{ product.get_image.title }}" />
-                </a>
-            {% endif %}
-        </div>
+			</a>
+			{% endif %}
+		</div>
         <div class="sub-images">
             {% for image in product.get_sub_images %}
                 <a href="{{ image.image.url_400x400 }}"
@@ -37,20 +37,21 @@
 
 	</div>
 
-	<div class="col-md-7">
+	<div id="product-details" class="col-md-7">
 
     <h1 class="product-title">
         {{ product.get_name }}
     </h1>
+
+
  {# Product sharing module #}
         <div id="shareprod">
         <div id="sharemsg">
-        {% trans 'Share, if you like our product!' %}
         </div>
         <div id="sharefb">
         <a href="https://www.facebook.com/sharer/sharer.php?u={% absolute_url "lfs_product" slug=product.slug %}" target="_blank"><img src="{{ STATIC_URL }}img/facebook.png" width="24" height="24" title="{% trans 'Share on Facebook' %}" alt="{% trans 'Share product on Facebook!'  %}" /></a>
         </div>
-  <div id="sharetw">
+	<div id="sharetw">
         <a href="https://twitter.com/intent/tweet?text={{ product.get_meta_title }}&url={% absolute_url "lfs_product" slug=product.slug %}&related=" target="_blank"><img src="{{ STATIC_URL }}img/twitter.png" width="24" height="24" title="{% trans 'Share on Twitter!' %}" alt="{% trans 'Share on Twitter!' %}" /></a>
         </div>
 
@@ -65,7 +66,6 @@
 
         </div>
         {# End product sharing module #}
-
 
     {# Displayed Properties #}
     <div class="product-properties">
@@ -307,7 +307,7 @@
         </div>
     {% endif %}
 	
-<div class="row">
+<div id="product-tabs" class="row">
 	<div class="col-md-12">
 	<ul class="nav nav-tabs">
 		<li class="active"><a href="#description" data-toggle="tab"> {% trans 'Description' %} </a> </li>

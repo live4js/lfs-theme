@@ -478,6 +478,23 @@ table.cp-properties td {
     padding: 10px 10px 0 0;
 }
 
+.product-price .for-sale-standard-price,
+.product-price .for-sale-price,
+.product-price .standard-price,
+.for-sale-standard-price,
+.price {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 115%; 
+}
+#left .product-price .for-sale-standard-price,
+#left .product-price .for-sale-price,
+#left .product-price .standard-price,
+#right .product-price .for-sale-standard-price,
+#right .product-price .for-sale-price,
+#right .product-price .standard-price {
+	font-size: 100%; 
+}
+
 .product-input-field {
     margin: 1px 0;
 }
@@ -711,11 +728,11 @@ ___________________________________________________________________________ */
 }
 
 .product .deliverable {
-    color: green;
+
 }
 
 .product .not-deliverable {
-    color: red;
+
 }
 
 .product .prices {
@@ -728,9 +745,9 @@ ___________________________________________________________________________ */
     font-size: 200%;
     font-weight: bold;
     margin: 0 0 2px 0;
-	color: #ff0000;
-	text-shadow: 0.05em 0.01em 0.05em #333333;
+	color: #555555;
 	padding: 3px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .product .for-sale-standard-price {
@@ -1361,29 +1378,21 @@ button.emphasized:hover {
 /* adding the share box in product page */
 
 #shareprod {
-    float: left;
-    height: 64px;
-    opacity: 0.4;
-    width: 156px;
-    margin-left: -30px;
+    float: right;
+    width: 118px;
     padding: 5px;
+    margin: -22% 2% 0 0;
 }
 
-#shareprod:hover {
-opacity: 1;
+#shareprod #sharefb:hover, #shareprod #sharetw:hover, 
+#shareprod #shareg:hover, #shareprod #sharepin:hover {
+	opacity:0.4;
+	filter:alpha(opacity=40); /* For IE8 and earlier */
 }
-
 
 #shareprod img {
 float: left;
-margin-right: 3px;
-}
-
-
-#sharemsg {
-color: #000;
-font-style:italic;
-font-size: 14px;
+margin-right: 2px;
 }
 
 /* end share module in product page */

@@ -185,7 +185,8 @@
 	    color: #336699;
 }
 
-.category .btn-success { 
+.category .btn-success,
+.product .btn-success { 
 	background: none repeat scroll 0 0 #2A7FD3;
 	color: #FFFFFF;
 	padding: 8px 15px;
@@ -193,7 +194,8 @@
         transition: all 0.4s ease 0s;
 } 
 
-.category .btn-success:hover { 
+.category .btn-success:hover,
+.product .btn-success:hover { 
 	background: none repeat scroll 0 0 #AAAAAA;
 	color: #FFFFFF;
 	text-decoration: none;
@@ -203,11 +205,53 @@
 ------------------------------------*/
 .product #center #content { padding-top:0; padding-left:0;  }
 
+.product #pg-bk {
+	margin-top:-2%;; 
+}
+
+.product .pagination {
+	margin-top: 10px; 
+}
+
+.product .col-md-5 { 
+	width: 38%;
+}
+
+.product .col-md-7 {
+	width: 62%; 
+	padding: 0;
+}
+
+.product .product-title { 	
+	font-size: 150%;
+	border-bottom: 1px solid #EEEEEE;
+	padding: 10px 0 10px 10px;
+	width: 100%;
+	font-weight: normal;
+	margin-top: 0px;
+}
+
 .pagination { float:right; }
 
 .pagination ul li { display: inline-block; }
 
+.product .btn-primary {
+    background-color: #5BC0DE;
+    border-color: #46B8DA;
+    color: #FFFFFF !important;
+    transition: all 0.4s ease 0s;
+	padding: 6px 20px 6px 12px;
+}
 
+.product .btn-primary:hover {
+    background-color: #39B3D7;
+    border-color: #269ABC;
+    color: #FFFFFF;
+}
+
+.product .reviews {
+	padding-left:15px;
+}
 /* Customer Login
 -------------------------------------*/
 .customer-login .btn-success {
@@ -390,3 +434,5 @@
 	border: 1px solid #47A447;
     color: #FFFFFF;
 }
+
+
