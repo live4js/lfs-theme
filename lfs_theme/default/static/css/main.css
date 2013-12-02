@@ -114,15 +114,14 @@ table.lfs-default {
 }
 
 table.lfs-default td {
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-bottom: 6px;
+    padding-top: 6px;
 }
 
 table.lfs-default th {
-    background-color: #9f8d83;
-    color: white;
-    font-weight: bold;
-    padding: 4px 6px;
+	background-color: #DDDDDD;
+	font-weight: bold;
+	padding: 6px 12px;
 }
 
 table.invoice-address th {
@@ -311,9 +310,9 @@ table.search-results {
 }
 
 .livesearch-wrapper {
+    left: 6px;
     position: relative; /* Anchor for absolute livesearch */
-    top: -40px;
-    left: -40px;
+    top: -26px;
 }
 
 #livesearch-results-table {
@@ -322,7 +321,8 @@ table.search-results {
 }
 
 #livesearch-results-table tr {
-    cursor: pointer;
+	cursor: pointer;
+	border-bottom: 1px solid #EEEEEE;
 }
 
 #livesearch-results-table tr:hover {
@@ -330,32 +330,47 @@ table.search-results {
 }
 
 #livesearch-results-table td {
-    vertical-align: top;
-    padding: 2px 0;
+	vertical-align: top;
+	padding-top: 8px;
+	padding-bottom: 8px; 
 }
 
 #livesearch-results-table td.image {
-    width:1%;
-    padding-right:8px;
-    height: 60px;
+    	width:20%;
+    	padding-left:8px;
+	padding-right:8px;
+    	height: 60px;
+}
+
+#livesearch-results-table td.text {
+
+}
+
+#livesearch-results-table td.number {
+    	padding-left:8px;
+	padding-right:8px;
 }
 
 #livesearch-results-table img {
-    width: 60px;
+	width: 60px;
 }
 
 #livesearch-results-table td.all-results {
-    text-align:right;
+	text-align:right;
+	padding-right: 8px;
+}
+
+#livesearch-results-table td a {
+	text-decoration:none;
 }
 
 #livesearch-result {
-    position: absolute;
-    display:none;
-    z-index: 1000;
-    background-color: white;
-    border: 1px solid #dfd7d3;
-    width:500px;
-    padding: 5px;
+	position: absolute;
+	display:none;
+	z-index: 1000;
+	background-color: white;
+	border: 1px solid #dfd7d3;
+	width: 40%;
 	top: 70px;
 	right: 20px;
 }
@@ -385,8 +400,8 @@ table.search-results {
 }
 
 #tabs li a:hover {
-    background: none repeat scroll 0 0 rgba(42, 127, 211, 0.4);
-    text-shadow: none;
+	background: none repeat scroll 0 0 rgba(42, 127, 211, 0.4);
+	text-shadow: none;
 	color: #FFFFFF;
 }
 #tabs li a {
@@ -531,9 +546,9 @@ div.product-quantity {
 }
 
 .sorting {
-    text-align: right;
-    padding-right: 5px;
-	width: 250px;
+	text-align: right;
+	padding-right: 5px;
+	padding-bottom: 4px;
 	float: right;
 }
 
@@ -1346,27 +1361,6 @@ a.button img {
   width:16px;
   height:16px;
   float:none;
-}
-
-/* Standard */
-button:hover,
-a.button:hover {
-  background-color: #beb5b0;
-  border: 1px solid #dfd7d3;
-  color:black !important;
-}
-
-/* Positive */
-body .emphasized {
-  color:white;
-  background-color:#7e6b60;
-}
-
-a.emphasized:hover,
-button.emphasized:hover {
-  background-color:#7e6b60;
-  border:1px solid #dfd7d3;
-  color:black !important;
 }
 
 .image-title {

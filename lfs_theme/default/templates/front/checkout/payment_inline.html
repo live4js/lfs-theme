@@ -3,14 +3,14 @@
     <div class="portlet-header">{% trans 'Payment' %}</div>
     {% for payment_method in payment_methods %}
         <div class="payment-method span-24">
-            <div class="span2">
+            <div class="col-md-2">
                 {% if payment_method.image %}
                     <img class="payment-method"
                          src="{{ payment_method.image.url }}"
                          alt="{{ payment_method.name }}">
                 {% endif %}
             </div>
-			<div class="span1">
+			<div class="col-md-1">
                 <input type="radio"
                        name="payment_method"
                        class="update-checkout payment-methods payment-method-type-{{ payment_method.type }}"
@@ -20,10 +20,10 @@
             </div>
 
             
-            <div class="span3">
+            <div class="col-md-3">
                 <label for="payment-method-{{ payment_method.id }}">{{ payment_method.name }}</label>
             </div>
-            <div class="span6 last">
+            <div class="com-md-6 last">
                 {{ payment_method.description|safe }}
             </div>
         </div>

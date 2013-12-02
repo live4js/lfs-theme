@@ -20,11 +20,11 @@
     <label for="search">{% trans 'Search' %}:</label>
     <form action="{% url "lfs_search" %}"
           class="search-results-form">
-        <input id="search-input"
+        <input id="search-input" class="form-control"
                type="text"
                name="q" />
 
-        <input type="submit"
+        <input class="btn btn-default" type="submit"
                value="{% trans 'Go!' %}">
     </form>
 
@@ -43,21 +43,21 @@
 
         <table class="lfs-default padding-top">
             <tr>
-                <th>{% trans 'Image' %}</th>
-                <th>{% trans 'Product' %}</th>
+                <th id="image">{% trans 'Image' %}</th>
+                <th id="product-name">{% trans 'Product' %}</th>
                 <th class="number">{% trans 'Price' %}</th>
                 <th></th>
             <tr>
             {% for product in products %}
                 <tr>
-                    <td>
+                    <td id="image">
                         <a href="{{ product.get_absolute_url }}" class="preview-100-100">
                             <img src="{{ product.get_image.image.url_100x100 }}"
                                  alt="{{ product.get_name }}"
                                  title="{{ product.get_name }}" />
                         </a>
                     </td>
-                    <td>
+                    <td id="product-name">
                         <a href="{{ product.get_absolute_url }}">
                             {{ product.get_name }}
                         </a>
@@ -94,7 +94,7 @@
                         </div>
                     </td>
                     <td class="buttons">
-                        <a class="button emphasized"
+                        <a class="btn btn-info button emphasized"
                            href="{% url "lfs_product" product.slug %}"
                            type="submit">
                             {% trans 'Details' %}
