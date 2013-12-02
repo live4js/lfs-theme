@@ -13,6 +13,8 @@
 
 {% block wrapper %}
 
+<div id="search-results">
+
     <h1 class="first-heading">{% trans 'Search results' %}</h1>
 
     <label for="search">{% trans 'Search' %}:</label>
@@ -101,5 +103,6 @@
                 </tr>
             {% endfor %}
         </table>
+</div>
     {% endif %}
 {% endblock %}

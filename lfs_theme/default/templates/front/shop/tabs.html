@@ -1,5 +1,14 @@
 {% load i18n %}
-<div class="nav-collapse">
+
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="nav-button">Toggle navigation</span>
+		<span class="nav-line"></span>
+		<span class="nav-line"></span>
+		<span class="nav-line"></span>
+	</button>
+
+<div class="navbar-collapse collapse">
+
     <ul class="nav nav-pills">
         <li>
 		<a href="/">
@@ -22,5 +31,6 @@
 					<input type="submit" value="{% trans 'Go!' %}" class="btn btn-default"/>
 			</form>
 		
-    </ul>
+
+		</ul>
 </div>

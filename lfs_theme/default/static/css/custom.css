@@ -68,29 +68,42 @@
 	margin-top: 3%;
 }
 
-/*Search
+/* Nav
 ----------------------------------*/
-#search-form { 
-
+#tabs .navbar-collapse {
+	padding-left: 0;
+	padding-right:0;
 }
 
-#search-form #search-input {
-	width: 80%; 
-	float-right;
+.nav-button {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
-#search-form .btn {
-	margin-left: -50px;
+.navbar-toggle .nav-line {
+    background: none repeat scroll 0 0 #777777;
+}
+.navbar-toggle .nav-line {
+    border-radius: 1px;
+    display: block;
+    height: 2px;
+    width: 22px;
 }
 
-#search-form .btn-default {
-        transition: all 0.4s ease 0s;
+.navbar-toggle .nav-line + .nav-line {
+    margin-top: 4px;
 }
-#search-form .btn-default:hover {
-	background: none repeat scroll 0 0 #2A7FD3;
-	border: 1px solid #2A7FD3;
-	color: #FFFFFF;
+
+#tabs button:hover, #tabs a.button:hover {
+    background-color: transparent;
 }
+
 /* Logo
 -------------------------------*/
 #logo { 
@@ -209,10 +222,6 @@
 	margin-top:-2%;; 
 }
 
-.product .pagination {
-	margin-top: 10px; 
-}
-
 .product .col-md-5 { 
 	width: 38%;
 }
@@ -230,6 +239,20 @@
 	font-weight: normal;
 	margin-top: 0px;
 }
+.product .product-quantity input {
+	background-color: #FFFFFF;
+    background-image: none;
+    border: 1px solid #DDDDDD;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555555;
+    display: block;
+    font-size: 14px;
+    line-height: 1.42857;
+    padding: 6px 10px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    vertical-align: middle;
+    width: 100%;
+}
 
 .pagination { float:right; }
 
@@ -243,7 +266,7 @@
 	padding: 6px 20px 6px 12px;
 }
 
-.product .btn-primary:hover {
+.product .btn-primary:hover  {
     background-color: #39B3D7;
     border-color: #269ABC;
     color: #FFFFFF;
@@ -252,6 +275,26 @@
 .product .reviews {
 	padding-left:15px;
 }
+
+.add-review .form-horizontal {
+	padding-top: 15px; 
+}
+
+.add-review .btn-success {
+	margin-top: 2%;
+	float: right;
+    background-color: #5BC0DE;
+    border-color: #46B8DA;
+    color: #FFFFFF !important;
+    transition: all 0.4s ease 0s;
+}
+
+.add-review .btn-success:hover  {
+    background-color: #39B3D7;
+    border-color: #269ABC;
+    color: #FFFFFF;
+}
+
 /* Customer Login
 -------------------------------------*/
 .customer-login .btn-success {
@@ -260,7 +303,7 @@
 	margin-top: 10px;
 	padding: 8px 15px;
 	border: 0;
-        transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
 } 
 
 .customer-login .btn-success:hover { 
@@ -435,4 +478,9 @@
     color: #FFFFFF;
 }
 
+/* Search
+-----------------------------------*/
+.search-results #search-results {
+	padding: 0 15px 0 15px;
+}
 

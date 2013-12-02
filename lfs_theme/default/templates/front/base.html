@@ -12,15 +12,14 @@
         {% block head %}{% endblock %}
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
         <meta name="generator" content="SpringShop - http://springshop.ro" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         {% compress css %}
             <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}jquery/lightbox/jquery.lightbox-0.5.css" />
             <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}jquery/jquery.jgrowl.css" />
- 	    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap.css" />
+			<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap.css" />
             <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/main.css" />
-	    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/custom.css" />
+			<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/custom.css" />
         {% endcompress %}
 
         <!--[if IE]>
@@ -36,13 +35,12 @@
             <script type="text/javascript" src="{{ STATIC_URL }}jquery/jquery.cookie.js"></script>
             <script type="text/javascript" src="{{ STATIC_URL }}jquery/lightbox/jquery.lightbox-0.5.js"></script>
             <script type="text/javascript" src="{{ STATIC_URL }}js/lfs.js"></script>
-	    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
-	    		
+			<script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
         {% endcompress %}
 
     </head>
-
-    <body class="{% block section %}lfs{% endblock %}">
+	
+    <body class="{% block section %}lfs{% endblock %}">	
 	<div id="wrapper" class="container">
 	<!-- header begins -->
 	<div id="header">
@@ -113,6 +111,7 @@
 
 	<!-- tabs begin -->
 		<div id="tabs">
+		
 			{% block tabs %}
 				{% tabs %}
 			{% endblock %}
