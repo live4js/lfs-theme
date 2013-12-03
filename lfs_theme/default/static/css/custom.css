@@ -115,18 +115,13 @@
 
 /* Left, Right and Center
 ----------------------------------*/
-#left {
-	padding-left: 15px;
-	padding-right: 0px; 
-}
-
-#right {
-	padding-left: 0px;
-	padding-right: 15px; 
+#left, #right, #center {
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 #center #content{
-	padding: 10px 10px 0 10px; 
+	padding: 10px; 
 }
 
 /* Recent Products */
@@ -212,7 +207,12 @@
 	background: none repeat scroll 0 0 #AAAAAA;
 	color: #FFFFFF;
 	text-decoration: none;
-} 
+}
+
+.category #center .product-image img {
+	width: 200px;
+	height: 200px;
+}
 
 /* Product Page
 ------------------------------------*/
@@ -306,27 +306,27 @@
 	padding-top: 0;
 }
 
-.customer-login #login {
-	padding-left: 20px; 
-}
-
-.customer-login #register {
-	padding-right: 20px;
-}
-
 .customer-login .form input, .control-group input {
     background-color: #FFFFFF;
     background-image: none;
     border: 1px solid #DDDDDD;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
     color: #555555;
-    display: block;
     font-size: 14px;
     line-height: 1.42857;
+    margin-bottom: 4px;
     padding: 6px 10px;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
     vertical-align: middle;
-    width: 50%;
+	width: 200px !important;
+}
+
+.customer-login label {
+	width: 120px;
+}
+
+.customer-login #login button {
+	margin-bottom: 10px; 
 }
 
 .customer-login #register button {
@@ -391,6 +391,10 @@
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
     vertical-align: middle;
     width: 100%;
+}
+
+.lfs .form-actions input {
+	margin-top: 10px;
 }
 
 /* Cart 
@@ -571,11 +575,6 @@
 
 /* Checkout
 ---------------------------------*/
-.checkout .btn-info:hover {
-    background: none repeat scroll 0 0 #2A7FD3;
-    color: #FFFFFF;
-    text-decoration: none;
-}
 .checkout .btn-info {
     background: none repeat scroll 0 0 #0066AA;
     border: 0 none;
@@ -584,8 +583,19 @@
 	padding: 7px 14px;
 }
 
+.checkout .btn-info:hover {
+    background: none repeat scroll 0 0 #2A7FD3;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 .checkout #payment-inline .payment {
 	width:100%;
 }
+
+.checkout #payment-inline label {
+	display: inline;
+}
+
 
 

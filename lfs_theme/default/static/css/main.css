@@ -89,10 +89,6 @@ td.label {
 	margin-bottom: 5px;
 }
 
-.contact-form  #id_name, #id_email {
-	margin-bottom: 5px;
-}
-
 .contact-form .message {
     padding-bottom: 10px;
 }
@@ -111,6 +107,7 @@ tr.error td {
 table.lfs-default {
     width: 100%;
     border-collapse: collapse;
+	padding-bottom: 10px;
 }
 
 table.lfs-default td {
@@ -590,9 +587,9 @@ a.current, span.current {
 }
 
 .category .product-data {
-	display: inline-block;
+	/*display: inline-block;*/
 	border: 1px solid #EEEEEE;
-	width: 100%;
+	/*width: 100%;*/
 	height: auto; 
 	padding: 10px;
 }
@@ -740,7 +737,6 @@ ___________________________________________________________________________ */
 }
 
 .product-title {
-    font-size: 100%;
     font-weight: bold;
     padding-bottom: 5px;
 }
@@ -903,12 +899,7 @@ ___________________________________________________________________________ */
 
 .customer-login .description,
 .checkout-login .description {
-    height: 60px;
-}
-
-.customer-login .form,
-.checkout-login .form {
-    /*height: 200px;*/
+	margin-bottom: 4%;
 }
 
 h2.authenticate {
