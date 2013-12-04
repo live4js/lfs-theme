@@ -219,16 +219,17 @@
 .product #center #content { padding-top:0; padding-left:0;  }
 
 .product #pg-bk {
-	margin-top:-2%;; 
+	display: block;
 }
 
-.product .col-md-5 { 
-	width: 38%;
+.product #pg-bk .pagination{
+	margin: 5px 0 0 0;
+	float:right;
 }
 
-.product .col-md-7 {
-	width: 62%; 
-	padding: 0;
+.product #pg-bk .btn{
+	font-size: 100%;
+	float:left;
 }
 
 .product .product-title { 	
@@ -239,6 +240,7 @@
 	font-weight: normal;
 	margin-top: 0px;
 }
+
 .product .product-quantity input {
 	background-color: #FFFFFF;
     background-image: none;
@@ -254,11 +256,9 @@
     width: 100%;
 }
 
-.pagination { float:right; }
+.product .pagination ul li { display: inline-block; }
 
-.pagination ul li { display: inline-block; }
-
-.product .btn-primary {
+.product .product .btn-primary {
     background-color: #5BC0DE;
     border-color: #46B8DA;
     color: #FFFFFF !important;
@@ -435,6 +435,25 @@
 	color: #FFFFFF;
 }
 
+.cart .col-md-2,
+.cart .col-md-10 {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.cart #cart-inline .voucher {
+	margin-bottom: 2%;
+}
+
+.cart .cart-amount { 
+	width: 50%;
+	font-size: 100%;
+}
+
+.cart .buttons .btn-success, .cart .buttons .btn-info { 
+	margin-bottom: 1%; 
+}
+
 .added-to-cart .page-header,
 .added-to-cart #cart-items,
 .added-to-cart .form-actions  {
@@ -442,7 +461,7 @@
 	padding-right: 15px;
 }
 
-.added-to-cart .btn-success {
+.added-to-cart .btn-primary {
 	background: none repeat scroll 0 0 #0066AA;
 	color: #FFFFFF;
 	padding: 7px 12px;
@@ -450,13 +469,13 @@
 	transition: all 0.4s ease 0s;
 }
 
-.added-to-cart .btn-success:hover {
+.added-to-cart .btn-primary:hover {
 	text-decoration: none;
 	background: none repeat scroll 0 0 #2A7FD3;
 	color: #FFFFFF;
 }
 
-.added-to-cart .default{
+.added-to-cart .btn-success{
 	transition: all 0.4s ease 0s;
 	background-color: #5CB85C;
 	border: 1px solid #5CB85C;
@@ -465,10 +484,15 @@
 
 }
 
-.added-to-cart .default:hover {
+.added-to-cart .btn-success:hover {
 	background-color: #47A447;
 	border: 1px solid #47A447;
 	color: #FFFFFF;
+}
+
+.form-actions .btn-primary, .form-actions .btn-success,
+.form-actions .btn-info {
+	margin-bottom: 1%;
 }
 
 /* Search

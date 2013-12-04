@@ -2,21 +2,22 @@
 
 		
 {% if cart_items %}
-	<div class="col-md-2">
+	<div class="voucher col-md-2">
+	
     <div class="portlet-header">
         {% trans "Voucher" %}
     </div>
+	
     <input data="{% url "lfs_check_voucher_cart" %}"
            type="text"
            id="voucher"
            name="voucher"
            value="{{ voucher_number }}"
            size="30" 
-		   class="col-md-12" />
-
-   
+	class="col-md-12" />
 	</div>
-	<div class="col-md-10">
+	
+	<div id="cart-table" class="col-md-10">
 	{% if voucher_number and voucher_message %}
 		 <div class="row">
 			<div class="col-md-12">
@@ -27,6 +28,7 @@
 			</div>
 		</div>
 		{% endif %}
+		
     <div class="portlet-header">
         {% trans 'Your Cart' %}
     </div>
@@ -96,7 +98,7 @@
 
                     </td>
                     <td class="number">
-                        <input class="number cart-amount col-md-6"
+                        <input class="form-control number cart-amount"
                                type="text"
                                name="amount-cart-item_{{ cart_item.obj.id }}"
                                size="6"
