@@ -23,8 +23,7 @@
         <th colspan="2">
             {% trans 'Product' %}
         </th>
-        <th class="left"
-            colspan="2">
+        <th class="left">
             {% trans 'Amount' %}
         </th>
         <th class="number">
@@ -72,16 +71,19 @@
 
             </td>
             <td class="number">
-                {{ cart_item.quantity }}
-            </td>
-            <td class="padding-left">
-                {{ cart_item.product.unit }}
+                <div>
+		{{ cart_item.quantity }}
+		</div>
+
+                <div> 
+		{{ cart_item.product.unit }}
 
                 {% if cart_item.product.active_packing_unit %}
                     <span class="packing-unit">
                         ({{ cart_item.obj|packages }} {{ cart_item.product.packing_unit_unit }})
                     </span>
                 {% endif %}
+		</div>
             </td>
             <td class="number">
                 {{ cart_item.product_price_net|currency:request}}
@@ -153,7 +155,7 @@
         <td class="number">
             {{ shipping_price|currency:request}}
         </td>
-        <td></td>
+
         <td class="number">
             {{ shipping_price|currency:request}}
         </td>
@@ -171,7 +173,7 @@
         <td class="number">
             {{ payment_price|currency:request}}
         </td>
-        <td></td>
+
         <td class="number">
             {{ payment_price|currency:request}}
         </td>

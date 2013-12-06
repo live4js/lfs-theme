@@ -25,26 +25,18 @@
               shipping="{% url "lfs_changed_shipping_country" %}">
             {% csrf_token %}
 			
-			<div class="row page-header">
-				<div class="col-md-6">
-					 <div class="portlet-header">{% trans 'Invoice address' %}</div>
-				</div>
-				<div class="col-md-6">
-					<div class="portlet-header">{% trans 'Shipping address' %}</div>
-					<label class="checkbox">
-					{{ checkout_form.no_shipping }}{{ checkout_form.no_shipping.label_tag }}
-					</label>
-					
-					
-				</div>
-			</div>
-			
 			<div class="row">
-				<div class="col-md-6">
+				<div id="billing-address" class="col-md-6">
+					<div class="portlet-header">{% trans 'Invoice address' %}</div>
 					{# Invoice Address #}
 					{{ invoice_address_inline|safe }}
 				</div>
-				<div class="col-md-6">
+				<div id="shipping-address" class="col-md-6">
+					<div class="portlet-header">{% trans 'Shipping address' %} 
+					<label class="checkbox">
+					{{ checkout_form.no_shipping }}{{ checkout_form.no_shipping.label_tag }}
+					</label>
+					</div>
 					{#  Shipping Address #}
 					{{ shipping_address_inline|safe }}
 				</div>

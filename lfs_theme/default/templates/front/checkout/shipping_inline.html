@@ -1,13 +1,13 @@
 {% for shipping_method in shipping_methods %}
     <div class="row shipping-method">
-        <div class="col-md-2">
+        <div class="col-md-1">
             {% if shipping_method.image %}
                 <img class="payment-method"
                      src="{{ shipping_method.image.url }}"
                      alt="{{ shipping_method.name }}">
             {% endif %}
         </div>
-		<div class="col-md-1">
+		<div id="radio-button" class="col-md-1">
             <input type="radio"
                    name="shipping-method"
                    class="update-checkout"
@@ -19,9 +19,8 @@
         <div class="col-md-3">
             <label for="shipping-method-{{shipping_method.id}}">{{ shipping_method.name }}</label>
         </div>
-        <div class="col-md-6 last">
+        <div class="col-md-7 last">
             {{ shipping_method.description|safe }}
         </div>
     </div>
-	<hr>
 {% endfor %}

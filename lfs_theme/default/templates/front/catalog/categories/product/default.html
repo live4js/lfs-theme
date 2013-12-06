@@ -17,7 +17,7 @@
             {% for product in col %}
               <td class="product-data"
                     onclick="window.location='{% url "lfs.catalog.views.product_view" product.slug %}'">
-                    <div class="product-image">
+                    <div class="product-image col-md-4">
                         <a href="{% url "lfs.catalog.views.product_view" product.slug %}">
                             {% if product.image.url_200x200 %}
                                 <img alt="{{ product.name }}"
@@ -25,14 +25,14 @@
                             {% endif %}
                         </a>
                     </div>
-                    <div class="product-details">
+                    <div class="product-details col-md-7">
                         <div class="product-title">{{ product.name }}</div>
                         <div class="product-description">{{ product.obj.get_short_description|safe|truncatewords_html:60 }}</div>
                     </div>
 
                     {% category_product_prices_gross product.obj.id %}
 
-                    <div class="product-price">
+                    <div class="product-price col-md-12">
                         {% if price_starting_from %}
                             {% trans "Starting at" %}
                         {% endif %}
