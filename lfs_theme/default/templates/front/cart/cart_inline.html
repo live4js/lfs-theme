@@ -185,8 +185,8 @@
                 <div>
                     {% trans 'Country' %}:
 		</div>
-		<div>
-                    <select class="cart-country"
+				<div>
+                    <select class="form-control cart-country"
                             name="country">
                         {% for country in countries %}
                             <option {% ifequal country.code selected_country.code  %}selected="selected"{% endifequal %}
@@ -195,7 +195,7 @@
                             </option>
                         {% endfor %}
                     </select>
-                </div></div>
+			</div></div>
 		<!-- End Country -->
 
 		<!-- Shipping -->
@@ -204,7 +204,7 @@
                     {% trans 'Shipping' %}:
                 </div>
                 <div>
-                    <select class="cart-shipping-method"
+                    <select class="form-control cart-shipping-method"
                             name="shipping_method">
                         {% for shipping_method in shipping_methods %}
                             <option {% ifequal shipping_method.id selected_shipping_method.id  %}selected="selected"{% endifequal %}
@@ -222,7 +222,7 @@
                     {% trans 'Payment' %}:
                 </div>
                 <div>
-                    <select class="cart-payment-method"
+                    <select class="form-control cart-payment-method"
                             name="payment_method">
                         {% for payment_method in payment_methods %}
                             <option {% ifequal payment_method.id selected_payment_method.id  %}selected="selected"{% endifequal %}
@@ -236,15 +236,7 @@
 	</div>
 
 	<div id="total" class="col-md-12">
-
-		<div id="total-price">
-                <div class="total-name">
-                    {% trans 'Total' %}:
-                </div>
-		<div class="price total-name">
-                    {{ cart_price|currency:request }}
-                </div></div>
-
+	
 		<div id="shipping-price">
                 <div>
                     {% trans 'Shipping' %}:
@@ -275,6 +267,14 @@
 		</div>
 		<div class="price">
 		{{ max_delivery_time }}
+                </div></div>
+				
+		<div id="total-price">
+                <div class="total-name">
+                    {% trans 'Total' %}:
+                </div>
+		<div class="price total-name">
+                    {{ cart_price|currency:request }}
                 </div></div>
 	</div>
 
