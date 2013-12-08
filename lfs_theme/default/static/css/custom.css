@@ -185,6 +185,15 @@
 
 /* Category Page
 ------------------------------------*/
+.category #center h1.first-heading {
+	border-bottom: 1px solid #EEEEEE;
+	padding-bottom: 10px;
+}
+
+.category .lfs-default .product-details {
+	padding-left: 30px;
+}
+
 .category .product-title {
 	font-size: 12px; 
 }
@@ -209,14 +218,6 @@
 	text-decoration: none;
 }
 
-.category .pager {
-	margin: 0;
-}
-
-.category .pager .total-text {
-	display:none; 
-} 
-
 /* Product Page
 ------------------------------------*/
 .product #center #content { padding-top:0; padding-left:0;  }
@@ -225,57 +226,47 @@
 	display: block;
 }
 
+.product #pg-bk .col-md-4 {
+	padding-left: 0;
+}
+
+.product #pg-bk .col-md-8 {
+	padding-right: 0;
+}
+
+.product #product-inline #product-tabs div {
+	padding: 0;
+}
+
+.product #product-inline #product-img {
+	padding-left: 0;
+}
+
+.product #product-inline #product-details {
+	padding-right: 0;
+}
+
 .product #pg-bk .pagination{
-	margin: 5px 0 0 0;
+	margin-top: 0;
 	float:right;
-}
-
-.product #pg-bk .btn{
-	font-size: 100%;
-	float:left;
-}
-
-.product .product-title { 	
-	font-size: 150%;
-	border-bottom: 1px solid #EEEEEE;
-	padding: 10px 0 10px 10px;
-	width: 100%;
-	margin-top: 0px;
-}
-
-.product .product-quantity input {
-	background-color: #FFFFFF;
-    background-image: none;
-    border: 1px solid #DDDDDD;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-    color: #555555;
-    display: block;
-    font-size: 14px;
-    line-height: 1.42857;
-    padding: 6px 10px;
-    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
-    vertical-align: middle;
-    width: 100%;
 }
 
 .product .pagination ul li { display: inline-block; }
 
-.product .product .btn-primary {
-    background-color: #5BC0DE;
-    border-color: #46B8DA;
-    color: #FFFFFF !important;
-    transition: all 0.4s ease 0s;
-	padding: 6px 20px 6px 12px;
+.product #pg-bk .btn{
+	font-size: 110%;
+	float:left;
 }
 
-.product .btn-primary:hover  {
-    background-color: #39B3D7;
-    border-color: #269ABC;
-    color: #FFFFFF;
+.product .product-title { 	
+	border-bottom: 1px solid #EEEEEE;
+	padding-bottom: 10px;
+	width: 100%;
+	margin-top: 0px;
 }
 
-.product .reviews {
-	padding-left:15px;
+.product .product-quantity {
+    vertical-align: middle;
 }
 
 .add-review .form-horizontal {
@@ -285,16 +276,16 @@
 .add-review .btn-success {
 	margin-top: 2%;
 	float: right;
-    background-color: #5BC0DE;
-    border-color: #46B8DA;
-    color: #FFFFFF !important;
-    transition: all 0.4s ease 0s;
+	background-color: #5BC0DE;
+	border-color: #46B8DA;
+	color: #FFFFFF !important;
+	transition: all 0.4s ease 0s;
 }
 
 .add-review .btn-success:hover  {
-    background-color: #39B3D7;
-    border-color: #269ABC;
-    color: #FFFFFF;
+	background-color: #39B3D7;
+	border-color: #269ABC;
+	color: #FFFFFF;
 }
 
 /* Customer Login

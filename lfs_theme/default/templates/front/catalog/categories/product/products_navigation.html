@@ -1,7 +1,7 @@
 {% load i18n %}
 {% if pagination.total_pages > 1 %}
-<div class="pager">
-    <ul>
+<div id="pager">
+    <ul class="pagination">
 	{% if pagination.first_page %}
 	<li><a href="{{ pagination.url }}?{{ pagination.getparam }}={{ pagination.first_page }}{{ pagination.getvars }}">{% trans "First page" %}</a></li>
     {% endif %}
@@ -21,12 +21,6 @@
     {% endif %}
 	{% if pagination.last_page %}
     <li><a href="{{ pagination.url }}?{{ pagination.getparam }}={{ pagination.last_page }}{{ pagination.getvars }}">{% trans "Last page" %}</a></li>
-    </span>
-    {% endif %}
-	{% if pagination.total_text %}
-        <li class="total-text">
-            <a href="#">({{ pagination.total_text }})</a>
-        </li>
     {% endif %}
     </ul>
 </div>

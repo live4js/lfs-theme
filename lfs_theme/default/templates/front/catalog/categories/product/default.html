@@ -2,11 +2,12 @@
 
 {% include "front/catalog/categories/product/products_navigation.html" %}
 
-{% sorting %}
-
 <h1 class="first-heading">
     {{ category.name }}
 </h1>
+
+{% sorting %}
+
 <div class="description">
     {{ category.description|safe }}
 </div>
@@ -25,7 +26,7 @@
                             {% endif %}
                         </a>
                     </div>
-                    <div class="product-details col-md-7">
+                    <div class="product-details col-md-8">
                         <div class="product-title">{{ product.name }}</div>
                         <div class="product-description">{{ product.obj.get_short_description|safe|truncatewords_html:60 }}</div>
                     </div>

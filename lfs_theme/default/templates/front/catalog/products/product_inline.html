@@ -80,11 +80,62 @@
     {% shipping product %}
     {% average_for_instance product %}
 
+    {# Configurable Properties #}
+    {% if product.is_configurable_product %}
+        <table class="cp-properties"
+               id="cp-url"
+               data="{% url "lfs_calculate_price" product.id %}">
+
+            {% for property in properties %}
+                <tr>
+                    {% if property.obj.is_select_field %}
+                        <td class="property-label">
+                            {{ property.title }}:
+                        </td>
+                        <td>
+                            <select class="form-control cp-property"
+                                    name="property-{{ property.id }}">
+                                {% if not property.obj.required %}
+                                    <option>---</option>
+                                {% endif %}
+                                {% for option in property.options %}
+                                    <option value="{{ option.id }}"
+                                        {% if option.selected %}selected="selected"{% endif %}>
+                                        {{ option.name }}
+
+                                        {% if property.display_price %}
+                                         / {{ option.price|currency:request}}
+                                        {% endif %}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </td>
+                        <td></td>
+                    {% else %}
+                        <td class="property-label">
+                            {{ property.title }}:
+                        </td>
+                        <td class="right">
+                            {% if property.obj.is_text_field %}
+                                <input class="product-input-field text-field" type="input" size="15" maxlength="100" name="property-{{ property.id }}" value="{{ property.value }}" />
+                            {% else %}
+                                <input class="right product-input-field number-field" type="input" size="6" maxlength="9" name="property-{{ property.id }}" value="{{ property.value }}" />
+                            {% endif %}
+                        </td>
+                        <td>
+                            {{ property.unit }}
+                        </td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+
     {# Prices #}
     <div class="prices">
         {% if for_sale %}
             <div>
-				<span class="for-sale-price" nowrap="nowrap">
+		<span class="for-sale-price" nowrap="nowrap">
                     <span class="for-sale-price-value">
                         {{ product|get_for_sale_price_gross:request|currency:request }}
                     </span>
@@ -130,57 +181,6 @@
         {% endif %}
     </div>
 
-    {# Configurable Properties #}
-    {% if product.is_configurable_product %}
-        <table class="cp-properties"
-               id="cp-url"
-               data="{% url "lfs_calculate_price" product.id %}">
-
-            {% for property in properties %}
-                <tr>
-                    {% if property.obj.is_select_field %}
-                        <td class="property-label">
-                            {{ property.title }}:
-                        </td>
-                        <td>
-                            <select class="cp-property"
-                                    name="property-{{ property.id }}">
-                                {% if not property.obj.required %}
-                                    <option>---</option>
-                                {% endif %}
-                                {% for option in property.options %}
-                                    <option value="{{ option.id }}"
-                                        {% if option.selected %}selected="selected"{% endif %}>
-                                        {{ option.name }}
-
-                                        {% if property.display_price %}
-                                         / {{ option.price|currency:request}}
-                                        {% endif %}
-                                    </option>
-                                {% endfor %}
-                            </select>
-                        </td>
-                        <td></td>
-                    {% else %}
-                        <td class="property-label">
-                            {{ property.title }}:
-                        </td>
-                        <td class="right">
-                            {% if property.obj.is_text_field %}
-                                <input class="product-input-field text-field" type="input" size="15" maxlength="100" name="property-{{ property.id }}" value="{{ property.value }}" />
-                            {% else %}
-                                <input class="right product-input-field number-field" type="input" size="6" maxlength="9" name="property-{{ property.id }}" value="{{ property.value }}" />
-                            {% endif %}
-                        </td>
-                        <td>
-                            {{ property.unit }}
-                        </td>
-                    {% endif %}
-                </tr>
-            {% endfor %}
-        </table>
-    {% endif %}
-
     <br clear="both">
     {% if product.is_deliverable %}
         <table align="right" class="buttons">
@@ -198,7 +198,7 @@
                         </div>
                     </td>
                 {% else %}
-                    <td>
+                    <td id="quantity">
                         {% if unit %}
                             {{ unit }}:
                         {% else %}
@@ -206,7 +206,7 @@
                         {% endif %}
                     </td>
                     <td class="product-quantity">
-                        <input class="number col-md-12"
+                        <input class="form-control number"
                                name="quantity"
                                size="3"
                                type="text"
@@ -389,13 +389,6 @@
 		</div>	
 	</div>
 </div>
-    
-   
-       
-   
-
-    
-    
 
     <input type="hidden"
            name="product_id"

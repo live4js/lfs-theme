@@ -1,9 +1,9 @@
 {% load i18n %}
-<div class="sorting">
-    <form action="{% url "lfs_catalog_set_sorting" %}"
+<div class="sorting row">
+    <form class="col-md-4 col-md-offset-8" action="{% url "lfs_catalog_set_sorting" %}"
           method="post">
         {% csrf_token %}
-        <select name="sorting control-group"
+        <select class="form-control" name="sorting control-group"
                 onchange="this.form.submit()">
             <option value="price"
                 {% ifequal "price" current %}selected="selected"{% endifequal %}>{% trans 'Price ascending' %}</option>

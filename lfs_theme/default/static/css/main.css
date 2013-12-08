@@ -2,8 +2,7 @@
 
 body {
 	background: url('../img/background.png') 0 0 repeat; 
-   	color: #58585a; 
-   	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+   	color: #58585a;
 	font-size: 12px !important;
 }
 
@@ -237,8 +236,8 @@ table.search-results {
 }
 
 .search-results .pagination {
-    float: left;
-    padding-bottom: 10px;
+	    float: left;
+	    padding-bottom: 10px;
 }
 
 .search-results .pagination a {
@@ -461,11 +460,6 @@ table.search-results {
     color: #9f8d83;
 }
 
-table.cp-properties {
-    margin: 20px 0;
-    float: right;
-}
-
 table.cp-properties td {
     vertical-align: middle;
 }
@@ -536,7 +530,6 @@ div.product-quantity {
 	text-align: right;
 	padding-right: 5px;
 	padding-bottom: 4px;
-	float: right;
 }
 
 .lfs-pagination a{
@@ -555,8 +548,8 @@ a.current, span.current {
 }
 
 .category .product-image {
-    margin-right: 20px;
     padding-bottom: 10px;
+	text-align: center;
 }
 
 .preview-100-100 {
@@ -605,7 +598,12 @@ a.current, span.current {
 
 .category .description {
     padding-top: 10px; 
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.category #pager {
+	margin-top: -26px;
+	text-align: center;
 }
 
 
@@ -727,7 +725,8 @@ ___________________________________________________________________________ */
 }
 
 .product .product-description {
-    clear: both;
+	clear: both;
+	padding-top: 10px;
 }
 
 .product .deliverable {
@@ -755,7 +754,6 @@ ___________________________________________________________________________ */
 
 .product .for-sale-standard-price {
     text-decoration: line-through;
-    padding-right: 10px;
 }
 
 .product-navigation {
@@ -777,6 +775,11 @@ ___________________________________________________________________________ */
 table.product-accessories,
 table.product-variants {
     font-size: 93%;
+}
+
+.product .buttons #quantity {
+	vertical-align: middle;
+	padding-right: 4px;
 }
 
 /* Cart
@@ -1081,7 +1084,7 @@ ___________________________________________________________________________ */
 }
 
 .portlet .for-sale-standard-price {
-    padding-right: 20px;
+    padding-right: 6px;
     text-decoration: line-through;
 }
 
@@ -1158,7 +1161,7 @@ ___________________________________________________________________________ */
 }
 
 .categories-portlet ul ul {
-    padding: 4px 0 0 15px;
+    padding: 4px 4px 0 6px;
 }
 
 .categories-portlet ul ul ul {
