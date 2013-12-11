@@ -8,7 +8,7 @@
         <th class="number">
             {% trans 'Quantity' %}
         </th>
-        <th class="number">
+        <th class="number hidden-xs">
             {% trans 'Net Price' %}
         </th>
         <th class="number">
@@ -60,7 +60,7 @@
                 {% endif %}
 
             </td>
-            <td class="number">
+            <td class="number hidden-xs">
                 {{ cart_item.product_price_net|currency:request}}
             </td>
             <td class="number">

@@ -45,7 +45,7 @@
                 <th class="left">
                     {% trans 'Amount' %}
                 </th>
-                <th class="number">
+                <th class="number hidden-xs">
                     {% trans 'Net Price' %}
                 </th>
                 <th class="number">
@@ -120,7 +120,7 @@
 			</a>
 			</div>
                     </td>
-                    <td class="number"
+                    <td class="number hidden-xs"
                         nowrap="nowrap">
                         {{ cart_item.product_price_net|currency:request }}
                     </td>
@@ -145,7 +145,7 @@
                     <td class="number">
 
                     </td>
-                    <td class="number">
+                    <td class="number hidden-xs">
                         - {{ discount.price_net|currency:request }}
                     </td>
                     <td class="number">
@@ -178,6 +178,8 @@
             {% endif %}
         </table>
 
+
+	<div class="col-md-6 col-md-offset-6">
 	<div id="csp" class="col-md-12">
 
 		<!-- Country -->
@@ -278,7 +280,7 @@
                 </div></div>
 	</div>
 
-	<div class="buttons col-span-12">
+					<div class="buttons col-span-12">
                         <a class="btn default btn-info"
                            href="{{ shopping_url }}">
                             {% trans 'Go on shopping' %}
@@ -287,14 +289,14 @@
                            href="{% url "lfs_checkout_dispatcher" %}">
                            {% trans 'Checkout' %}
                         </a>
-	</div>
-
+					</div>
+	</div></div>
     </form>
 	</div>
 {% else %}
 
-	<div class="alert">
-        <button data-dismiss="alert" class="close" type="button">&times;</button>
+	<div class="alert alert-info">
+         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         {% trans 'Your Cart is empty' %}
       </div>
     <a class="btn default btn-success"

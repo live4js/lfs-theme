@@ -132,11 +132,6 @@
 	border-bottom: 0;
 }
 
-#left .recent-products-portlet .portlet-item, 
-#right .recent-products-portlet .portlet-item {
-    padding: 10px 0;
-}
-
 #left .recent-products-portlet .product-image, 
 #right .recent-products-portlet .product-image {
 	float: none;
@@ -200,6 +195,10 @@
 
 .category .product-title:hover { 
 	    color: #336699;
+}
+
+.category #pager .pagination {
+	margin: 20px 0 0;
 }
 
 .category .btn-success,
@@ -456,6 +455,12 @@
 	display: inline-block;
 }
 
+.cart #total {
+	border: 1px solid #EEEEEE;
+	margin-top: 16px;
+	padding-top: 4px;
+}
+
 .cart #total-price,
 .cart #shipping-price,
 .cart #payment-price,
@@ -465,6 +470,10 @@
 	padding-top: 1%;
 	padding-bottom: 1%;
 	border-bottom: 1px solid #EEE;
+}
+
+.cart #total-price {
+	border:0;
 }
 
 .cart #total-price div,

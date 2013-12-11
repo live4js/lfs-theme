@@ -1,12 +1,12 @@
 {% load i18n lfs_tags %}
 
-{% include "front/catalog/categories/product/products_navigation.html" %}
-
 <h1 class="first-heading">
     {{ category.name }}
 </h1>
 
 {% sorting %}
+
+{% include "front/catalog/categories/product/products_navigation.html" %}
 
 <div class="description">
     {{ category.description|safe }}
@@ -80,4 +80,7 @@
         </tr>
         {% endfor %}
     </table>
+	
+	{% include "front/catalog/categories/product/products_navigation.html" %}
+	
 </div>
