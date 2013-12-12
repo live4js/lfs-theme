@@ -1294,15 +1294,11 @@ ___________________________________________________________________________ */
 }
 
 .delete-button {
-    background-color: #beb5b0;
-    border: 1px solid #dfd7d3;
     text-decoration: none;
-    padding: 2px 4px;
-    color: white !important;
+    color: #990000;
     font-weight: bold;
-    font-size: 9px;
-    margin-left: 10px;
-    position: relative; top:2px;
+    top: 4px;
+    position: relative;
     font-family: Arial;
 }
 

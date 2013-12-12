@@ -4,15 +4,17 @@
 {% load lfs_portlets_tags %}
 {% load compress %}
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <title>{% block title %}{{ SHOP.get_meta_title }}{% endblock %}</title>
         <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/ico" />
         {% block head %}{% endblock %}
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
         <meta name="generator" content="SpringShop - http://springshop.ro" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
         {% compress css %}
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}jquery/lightbox/jquery.lightbox-0.5.css" />
 		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}jquery/jquery.jgrowl.css" />
