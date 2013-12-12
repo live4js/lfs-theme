@@ -696,13 +696,11 @@ ___________________________________________________________________________ */
 }
 
 .product .main-image {
-    width: 200px;
-    height: 200px;
+	text-align: center; 
 }
 
 .product-images .main-image {
-    margin-right: 10px;
-    width: 200px;
+	text-align: center; 
 }
 
 .product .sub-images {

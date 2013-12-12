@@ -142,55 +142,27 @@
             </td>
         </tr>
     {% endif %}
-
-    <tr>
-        <td></td>
-        <td>
-            {% trans 'Shipping' %} ({{ selected_shipping_method.name }})
-        </td>
-        <td class="number">
-            1
-        </td>
-        <td class="hidden-xs"></td>
-        <td class="number">
-            {{ shipping_price|currency:request}}
-        </td>
-
-        <td class="number">
-            {{ shipping_price|currency:request}}
-        </td>
-    </tr>
-
-    <tr>
-        <td></td>
-        <td>
-            {% trans 'Payment' %} ({{ selected_payment_method.name }})
-        </td>
-        <td class="number">
-            1
-        </td>
-        <td class="hidden-xs"></td>
-        <td class="number">
-            {{ payment_price|currency:request}}
-        </td>
-
-        <td class="number">
-            {{ payment_price|currency:request}}
-        </td>
-    </tr>
-
-    <tr>
-        <td colspan="7"
-            class="total number padding-top">
-            <span class="total-label">{% trans 'Total' %}:</span>
-            {{ cart_price|currency:request}}
-        </td>
-    </tr>
-    <tr>
-        <td colspan="7"
-            class="discreet number">
-            <span class="total-label">{% trans 'Inclusive VAT' %}:</span>
-            {{ cart_tax|currency:request}}
-        </td>
-    </tr>
 </table>
+
+<div id="total" class="col-md-12">
+
+	<div id="shipping-price">
+		<div>{% trans 'Shipping' %} ({{ selected_shipping_method.name }}):</div>
+		<div class="price">{{ shipping_price|currency:request}}</div>
+	</div>
+
+	<div id="payment-price">
+		<div>{% trans 'Payment' %} ({{ selected_payment_method.name }}):</div>
+		<div class="price">{{ payment_price|currency:request}}</div>
+	</div>
+
+	<div id="tax-price">
+		<div>{% trans 'Inclusive VAT' %}:</div>
+		<div class="price">{{ cart_tax|currency:request}}</div>
+	</div>
+
+	<div id="total-price">
+		<div class="total-name">{% trans 'Total' %}:</div>
+		<div class="price total-name">{{ cart_price|currency:request}}</div>
+	</div>
+</div>

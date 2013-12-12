@@ -85,9 +85,21 @@
     position: absolute;
     width: 1px;
 }
+.navbar-toggle {
+	width: 140px;
+}
+
+.navbar-toggle #nav-menu-btn {
+    color: #0066AA;
+    font-size: 120%;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: -3px;
+    position: absolute;
+}
 
 .navbar-toggle .nav-line {
-    background: none repeat scroll 0 0 #777777;
+    background: none repeat scroll 0 0 #0066AA;
 }
 .navbar-toggle .nav-line {
     border-radius: 1px;
@@ -239,6 +251,7 @@
 
 .product #product-inline #product-img {
 	padding-left: 0;
+	padding-right: 0;
 }
 
 .product #product-inline #product-details {
@@ -351,16 +364,8 @@
         transition: all 0.4s ease 0s;	
 }
 
-#account #invoice-address, #shipping-address {
-	padding-left: 0px; 
-}
-
 #account #invoice-address .control-label, #account #shipping-address .control-label {
 	margin-right: 10px;
-}
-
-#invoice-address .form-wrapper, #shipping-address .form-wrapper {
-	padding-left:15px;
 }
 
 .btn-address { 
@@ -421,6 +426,11 @@
 	background: none repeat scroll 0 0 #2A7FD3;
 	color: #FFFFFF;
 }
+
+.cart #cart-inline {
+	padding-left: 0;
+	padding-right: 0;
+} 
 
 .cart .col-md-2,
 .cart .col-md-10 {
@@ -653,6 +663,10 @@
 	padding-right: 10px; 
 }
 
+.checkout #shipping-address .checkbox { 
+	text-transform: none;
+}
+
 .checkout .btn-info {
     background: none repeat scroll 0 0 #0066AA;
     border: 0 none;
@@ -700,7 +714,53 @@
 	display: inline-block; 
 }
 
-.checkout .table .total {
-	font-size: 160%;
-	color: #0066AA;
+.checkout #total {
+	border: 1px solid #EEEEEE;
+	margin-top: 16px;
+	padding-top: 4px;
 }
+
+.checkout #total-price,
+.checkout #shipping-price,
+.checkout #payment-price,
+.checkout #tax-price,
+.checkout #delivery-time {
+	text-align: right;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	border-bottom: 1px solid #EEE;
+}
+
+.checkout #total-price {
+	border:0;
+}
+
+.checkout #total-price div,
+.checkout #shipping-price div,
+.checkout #payment-price div,
+.checkout #tax-price div,
+.checkout #delivery-time div {
+	display: inline-block;
+}
+
+.checkout #total .price {
+	width: 80px;
+	font-weight: bold;
+}
+
+.checkout #total-price .total-name,
+.checkout #total-price .total-number {
+	color: #0066AA;
+	font-size: 150%;
+	font-weight: bold;
+}
+
+.checkout #message-form-checkbox input {
+	float: left;
+}
+
+.checkout #message-form-checkbox label {
+    padding-left: 5px;
+    padding-top: 2px;
+}
+

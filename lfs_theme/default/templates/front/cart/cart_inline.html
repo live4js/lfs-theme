@@ -238,7 +238,13 @@
 	</div>
 
 	<div id="total" class="col-md-12">
-	
+                <div id="delivery-time">
+		<div>
+			{% trans 'Total delivery time' %}:
+		</div>
+		<div class="price">
+		{{ max_delivery_time }}
+                </div></div>
 		<div id="shipping-price">
                 <div>
                     {% trans 'Shipping' %}:
@@ -262,14 +268,6 @@
 		<div class="price">
                     {{ cart_tax|currency:request }}
                 </div></div>
-
-                <div id="delivery-time">
-		<div>
-			{% trans 'Total delivery time' %}:
-		</div>
-		<div class="price">
-		{{ max_delivery_time }}
-                </div></div>
 				
 		<div id="total-price">
                 <div class="total-name">
@@ -280,7 +278,7 @@
                 </div></div>
 	</div>
 
-					<div class="buttons col-span-12">
+		<div class="buttons col-span-12">
                         <a class="btn default btn-info"
                            href="{{ shopping_url }}">
                             {% trans 'Go on shopping' %}
@@ -289,7 +287,7 @@
                            href="{% url "lfs_checkout_dispatcher" %}">
                            {% trans 'Checkout' %}
                         </a>
-					</div>
+		</div>
 	</div></div>
     </form>
 	</div>
@@ -299,7 +297,7 @@
          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         {% trans 'Your Cart is empty' %}
       </div>
-    <a class="btn default btn-success"
+    <a class="btn default btn-info"
        href="{{ shopping_url }}">
        {% trans 'Go on shopping' %}
     </a>
