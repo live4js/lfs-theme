@@ -5,7 +5,7 @@
 {% load compress %}
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://w3.org">
     <head>
         <title>{% block title %}{{ SHOP.get_meta_title }}{% endblock %}</title>
         <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/ico" />
@@ -38,7 +38,7 @@
             <script type="text/javascript" src="{{ STATIC_URL }}js/lfs.js"></script>
 			<script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
         {% endcompress %}
-
+	
     </head>
 	
     <body class="{% block section %}lfs{% endblock %}">	
@@ -50,8 +50,8 @@
 		<div id="top-menu" class="row">
 
 		<!-- Login -->
-		<div id="login"  class="col-md-12">
-			<div class="btn btn-default pull-right">
+		<div id="top-menu"  class="col-md-12">
+			<div id="login" class="btn btn-default pull-right">
 				<a data-toggle="dropdown" href="#">
 					<i class="icon-user"></i> {% if user.is_authenticated %}
                             {% if user.first_name %}
@@ -148,7 +148,7 @@
 						{% block content %}{% endblock %}
 					
 					{% block center-slot-wrapper %}
-							{% if SlotCenter %}
+								{% if SlotCenter %}
 										
 										{% block center-slot %}
 											{% lfs_portlet_slot 'Center' %}

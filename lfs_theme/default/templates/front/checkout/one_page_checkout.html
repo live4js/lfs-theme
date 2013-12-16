@@ -13,11 +13,11 @@
 
 {% block wrapper %}
     {% if checkout_form.errors %}
-        <div class="alert alert-error">
+        <div class="alert alert-danger">
             {% trans "The operation could not be performed because one or more errors occurred. Please see below." %} {{ checkout_form.errors }}
         </div>
     {% endif %}
-    <div class="col-md-12">
+	
         <form class="form-horizontal"
               method="post"
               data="{% url "lfs_changed_checkout" %}"
@@ -45,7 +45,7 @@
 
 
             {# Shipping #}
-            <div class="shipping">
+            <div class="shipping col-md-12">
                 <div class="portlet-header">{% trans 'Shipping' %}</div>
                 <div id="shipping-inline">
                     {{ shipping_inline|safe }}
@@ -53,7 +53,7 @@
             </div>
 
             {# Payment #}
-            <div class="payment">
+            <div class="payment col-md-12">
                 <div id="payment-inline">
                     {{ payment_inline|safe }}
                 </div>
@@ -223,15 +223,15 @@
 		</div>
 
             {# Cart #}
-            <div id="cart-inline">
+            <div id="cart-inline" class="col-md-12">
                 {{ cart_inline }}
             </div>
 
             {# Message #}
-            <div id="message" class="padding-top">
+            <div id="message" class="col-md-12 padding-top">
                 {{checkout_form.message.label_tag}}:
             </div>
-            <div id="message-form">
+            <div id="message-form" class="col-md-12">
                 {{ checkout_form.message }}
             </div>
 
@@ -241,13 +241,13 @@
                         <li>{{ checkout_form.errors.confirm_toc }}</li>
                     </ul>
                 {% endif %}
-		<div id="message-form-checkbox" class="padding-top padding-bottom">
+		<div id="message-form-checkbox" class="col-md-12 padding-top padding-bottom">
                 <input type="checkbox" name="confirm_toc" id="confirm_toc" />
                 <label for="confirm_toc">{% trans "Please confirm our terms and conditions" %}</label>
 		</div>
             {% endif %}
 
-            <div class="checkout_form-actions right">
+            <div class="checkout_form-actions col-md-12 right">
                 <button class="btn btn-info"
                         type="submit">
                     {% trans 'Submit order' %}
@@ -267,5 +267,4 @@
             {% endif %}
 
         </form>
-    </div>
 {% endblock %}

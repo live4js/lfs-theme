@@ -1,3 +1,10 @@
+/* Home 
+--------------------------------*/
+#center .first-heading  {
+	border-bottom: 1px solid #EEEEEE;
+	padding: 10px 0;
+}
+
 /* Container
 -------------------------------*/
 #wrapper { 
@@ -28,44 +35,46 @@
 
 /* Login Button
 --------------------------------*/
-#login {
+#top-menu {
 	position: relative;
 	z-index: 1;		
 }
 
-#login a:hover {
+#top-menu #login {
+	margin-right:-15px;
+	padding: 4px 14px;
+}
+
+#top-menu a:hover {
 	text-decoration: none;		
 }
 
-#login .btn-default {
+#top-menu .btn-default {
 	background: transparent;	
 	border: 0px solid #FFF;	
 	color: #FFF;
-	padding: 4px 10px;
-	margin-right: 4px; 
 }
 
-#login .btn-default a {
+#top-menu .btn-default a {
 	color: #FFFFFF;	
 }
 
-#login .btn-default a:hover {
+#top-menu .btn-default a:hover {
 	color: #FFFFFF;	
 }
 
-#login .btn-default li a {
+#top-menu .btn-default li a {
 	color: #0066AA;
 }
 
-#login .btn-default li:hover a {
+#top-menu .btn-default li:hover a {
 	color: #0066AA;
 }
 
-#login .dropdown-menu {
-	top: 0%;
+#top-menu .dropdown-menu {
 	border-radius: 0;
-	margin-right: -1px;
-	margin-top: 3%;
+	margin-right: 6px;
+	margin-top: 28px;
 }
 
 /* Nav
@@ -132,8 +141,8 @@
     padding-right: 8px;
 }
 
-#center #content{
-	padding: 10px; 
+#center #content {
+    padding: 8px 8px 10px 8px;
 }
 
 /* Recent Products */
@@ -192,11 +201,6 @@
 
 /* Category Page
 ------------------------------------*/
-.category #center h1.first-heading {
-	border-bottom: 1px solid #EEEEEE;
-	padding-bottom: 10px;
-}
-
 .category .lfs-default .product-details {
 	padding-left: 30px;
 }
@@ -231,8 +235,6 @@
 
 /* Product Page
 ------------------------------------*/
-.product #center #content { padding-top:0; padding-left:0;  }
-
 .product #pg-bk {
 	display: block;
 }
@@ -657,10 +659,6 @@
 
 /* Checkout
 ---------------------------------*/
-.checkout .col-md-12 { 
-	padding-left:10px; 
-	padding-right: 10px; 
-}
 
 .checkout #shipping-address .checkbox { 
 	text-transform: none;
@@ -763,3 +761,20 @@
     padding-top: 2px;
 }
 
+/* Only applies while screen is 980px or less */
+@media (max-width: 768px) {
+	#tabs .nav li {
+		float: none; 
+	}
+
+	#tabs ul {
+		padding-right: 10px;
+	}
+}
+
+/* only applies while screen is 980px or greater */
+@media (min-width: 768px) {
+	#tabs .nav li {
+		float: left; 
+	}
+}

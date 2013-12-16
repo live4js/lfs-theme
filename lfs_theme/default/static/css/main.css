@@ -253,7 +253,7 @@ table.search-results {
 
 #search-form,
 .search-results-form {
-	margin-top: 1%;
+	margin: 10px 0 0;
 }
 
 .navbar-form .form-group  {
@@ -380,7 +380,6 @@ table.search-results {
 
 #tabs li {
     padding: 5px 0px;
-    float: left;
     display: block;
     position: relative;
 }
@@ -404,10 +403,9 @@ table.search-results {
 
 .breadcrumbs {
 	background-color: #F5F5F5;
-	border-radius: 4px;
 	list-style: none outside none;
-	margin-bottom 20px;
 	padding: 8px 15px;
+	margin-bottom: 0px;
 }
 
 .breadcrumbs > li {

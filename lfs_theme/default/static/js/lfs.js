@@ -405,3 +405,22 @@ $(document).ajaxSend(function(event, xhr, settings) {
         xhr.setRequestHeader("X-CSRFToken", $.cookie("csrftoken"));
     }
 });
+
+$('.voucher').ready(function() {
+	if(window.location.hash) {
+	var hash = window.location.hash.substring(1);
+		if (hash == 'coupon') { 
+			$('.voucher').show();
+		} else {
+			$('.voucher').hide();
+		}
+	}  else {
+		$('.voucher').hide();
+	}
+});
+
+
+function replace_product_row() {
+
+			$(".product-data").addClass("full-width");
+};

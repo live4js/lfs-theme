@@ -1,6 +1,8 @@
 {% load i18n lfs_tags %}
 
 {# Voucher #}
+
+<div class="voucher">
 <h2 class="padding-top-large">
     {% trans "Voucher code" %}
 </h2>
@@ -16,6 +18,7 @@
         {{ voucher_message }}
     </span>
 {% endif %}
+</div>
 
 <h2>{% trans 'Your cart' %}</h2>
 <table class="table table-bordered"> 
