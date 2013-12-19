@@ -1,3 +1,64 @@
+/* Only applies while screen is 980px or less */
+@media (max-width: 768px) {
+	
+	.btn-default, .btn-success, 
+	.btn-info, .btn-primary {
+		width: 100%;
+	}
+	
+	#search-form .btn-default {
+		width: auto; 
+	}
+	
+	.product #product-details {
+		padding-left:0; 
+	}
+	
+	.product #pg-bk  .col-md-4 {
+		padding-right: 0;
+		z-index: 1;
+	}
+	
+	.product #pg-bk  .col-md-8 {
+		padding-left: 0;
+		text-align: center;
+	}
+	
+	.product #pg-bk  .col-md-8 .pagination{
+		float: none;
+		margin-top: 15px; 
+	}
+	
+	#top-menu .btn-default { 
+		width:auto;
+	}
+	
+	#tabs .nav li {
+		float: none; 
+	}
+
+	#tabs ul {
+		padding-right: 10px;
+	}
+	
+	#tabs li {
+		border-bottom: 1px solid #EEE;
+	}
+	
+	#tabs li a {
+		font-size: 12px;
+	}
+	
+}
+
+/* only applies while screen is 980px or greater */
+@media (min-width: 768px) {
+	#tabs .nav li {
+		float: left; 
+	}
+}
+/* End of "Only applies while screen is 980px or less" */
+
 /* Home 
 --------------------------------*/
 #center .first-heading  {
@@ -28,11 +89,6 @@
 	box-shadow: 0 1px 0 rgba(255,255,255,.1);
 }
 
-#top-menu #login {
-	margin: 0 auto;
-	padding: 0px;
-}
-
 /* Login Button
 --------------------------------*/
 #top-menu {
@@ -42,7 +98,7 @@
 
 #top-menu #login {
 	margin-right:-15px;
-	padding: 4px 14px;
+	padding: 5px 15px;
 }
 
 #top-menu a:hover {
@@ -75,6 +131,10 @@
 	border-radius: 0;
 	margin-right: 6px;
 	margin-top: 28px;
+}
+
+#top-menu .btn-default .caret {
+	border-top-color: #FFFFFF;
 }
 
 /* Nav
@@ -142,7 +202,8 @@
 }
 
 #center #content {
-    padding: 8px 8px 10px 8px;
+	min-height: 250px; 
+	padding: 8px 8px 10px 8px;
 }
 
 /* Recent Products */
@@ -279,8 +340,17 @@
 	margin-top: 0px;
 }
 
-.product .product-quantity {
-    vertical-align: middle;
+.product #quantity div {
+	display: inline-block; 
+}
+
+.product .quantity-name {
+	padding-right: 6px;
+    padding-top: 4px;
+}
+
+.product #add-to-cart .btn-success {
+	margin-left: -15px; 
 }
 
 .add-review .form-horizontal {
@@ -300,6 +370,12 @@
 	background-color: #39B3D7;
 	border-color: #269ABC;
 	color: #FFFFFF;
+}
+
+#attachments a {
+	text-decoration:none;
+	font-size: 120%;
+	color: #000;
 }
 
 /* Customer Login
@@ -377,7 +453,8 @@
 }
 
 #invoice-address  .form-control, #shipping-address .form-control,
-#cart-inline #voucher {
+#cart-inline #voucher,
+.password-reset #id_email {
     background-color: #FFFFFF;
     background-image: none;
     border: 1px solid #DDDDDD;
@@ -394,6 +471,30 @@
 
 .lfs .form-actions input {
 	margin-top: 10px;
+}
+
+/* Reset Password
+----------------------*/
+.password-reset input#id_email {
+	width: 240px;
+}
+
+.password-reset .errorlist {
+	padding-bottom: 4px;
+	padding-left: 0;
+}
+
+.password-reset label {
+	padding-bottom: 4px;
+	padding-left: 0;
+}
+
+.password-reset .label,
+.password-reset .field label {
+	color: #58585A;
+	font-size: 12px;
+	margin-left: 0;
+	padding-left: 0;
 }
 
 /* Cart 
@@ -761,20 +862,7 @@
     padding-top: 2px;
 }
 
-/* Only applies while screen is 980px or less */
-@media (max-width: 768px) {
-	#tabs .nav li {
-		float: none; 
-	}
-
-	#tabs ul {
-		padding-right: 10px;
-	}
-}
-
-/* only applies while screen is 980px or greater */
-@media (min-width: 768px) {
-	#tabs .nav li {
-		float: left; 
-	}
+.checkout .alert { 
+	margin-left: 15px;
+	margin-right: 15px;	
 }

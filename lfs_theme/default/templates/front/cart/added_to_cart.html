@@ -22,29 +22,32 @@
     </div>
 
     {% if product_accessories %}
+	<div id="accessories-table" class="col-md-12">
         <h3>{% trans 'Accessories' %}</h3>
-        <table class="table table-striped table-bordered">
+        <table class="table table-bordered">
             <tr>
-                <th>
+                <th class="col-md-8">
                     {% trans 'Name' %}
                 </th>
-                <th class="number">
+                <th class="number col-md-1">
                     {% trans 'Quantity' %}
                 </th>
-                <th class="number">
+                <th class="number col-md-1">
                     {% trans 'Price' %}
                 </th>
-                <th class="number">
+                <th class="number col-md-1">
                     {% trans 'Total' %}
                 </th>
-                <th></th>
+				<th class="col-md-1 hidden-xs"></th>
             </tr>
             {% for product_accessory in product_accessories %}
                 <tr>
                     <td>
-                        <a href="{{ product_accessory.accessory.get_absolute_url }}">
+                        <div>
+						<a href="{{ product_accessory.accessory.get_absolute_url }}">
                             {{ product_accessory.accessory.get_name }}
                         </a>
+						</div>
                     </td>
                     <td class="number">
                         {{ product_accessory.quantity|quantity }}
@@ -55,18 +58,28 @@
                     <td class="number">
                         {{ product_accessory.get_price|currency:request }}
                     </td>
-                    <td class="right">
-                        <a class="button add-accessory-link"
-                           rel="nofollow"
-                           href="{% url "lfs_add_accessory_to_cart" product_accessory.accessory.id product_accessory.quantity %}">
-                           {% trans 'Add' %}
-                        </a>
-                    </td>
+					<td class="hidden-xs">
+						<a class="btn btn-default add-accessory-link"
+						rel="nofollow"
+						href="{% url "lfs_add_accessory_to_cart" product_accessory.accessory.id product_accessory.quantity %}">
+						{% trans 'Add' %}
+						</a>
+					</td>
                 </tr>
+				<tr class="visible-xs">
+					<td colspan="4" style="text-align:center;">
+						<a class="btn btn-default add-accessory-link"
+						rel="nofollow"
+						href="{% url "lfs_add_accessory_to_cart" product_accessory.accessory.id product_accessory.quantity %}">
+						{% trans 'Add' %}
+						</a>
+					</td>
+				</tr>
             {% endfor %}
         </table>
     {% endif %}
-
+	</div>
+	
     <div class="form-actions">
         <a class="btn btn-primary"
            href="{% url "lfs_checkout_dispatcher" %}">

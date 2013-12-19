@@ -14,7 +14,7 @@
 <div id="products">
     <table class="lfs-default">
         {% for col in products %}
-        <tr class="product-row">
+        <tr class="product-row-{{ category.get_format_info.product_cols }}">
             {% for product in col %}
               <td class="product-data"
                     onclick="window.location='{% url "lfs.catalog.views.product_view" product.slug %}'">
