@@ -90,12 +90,21 @@
 			</div>
 		</div>
 		<!-- Login ends -->
-
-		<div id="logo" class="col-md-12">
+		<div class="row">
+		<div id="logo" class="col-md-8">
 			<a href="{% url "lfs.core.views.shop_view" %}">
 				<img class="logo" src="{{ STATIC_URL }}img/logo.png" alt="Logo" />
 			</a>
 		</div>
+		<div id="search" class="col-md-4">
+				<form id="search-form" class="navbar-form navbar" role="search" action="{% url "lfs_search" %}" autocomplete="off">
+				<div class="form-group" >
+				<input type="hidden" name="livesearch" value="1" />
+				<input id="search-input" class="form-control" type="text" name="q" autocomplete="off" data-url="{% url "lfs_livesearch" %}" placeholder="{% trans 'Search' %}" />
+				</div>
+				<input type="submit" value="{% trans 'Go!' %}" class="btn btn-default"/>
+				</form>
+		</div></div>
 
 		<div class="container livesearch-wrapper">
                  <div id="livesearch-result"></div>
@@ -124,7 +133,7 @@
 				{% block wrapper %}
 					{% block left-slot-wrapper %}
 							{% if SlotLeft %}
-				<div id="left" class="col-md-2 hidden-xs">
+				<div id="left" class="col-md-2">
 					{% block left-slot %}
 						{% lfs_portlet_slot 'Left' %}
 					{% endblock %}

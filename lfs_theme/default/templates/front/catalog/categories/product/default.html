@@ -12,13 +12,13 @@
     {{ category.description|safe }}
 </div>
 <div id="products">
-    <table class="lfs-default">
+    <div class="lfs-default">
         {% for col in products %}
-        <tr class="product-row-{{ category.get_format_info.product_cols }}">
+        <ul id="product-row" class="product-row-{{ category.get_format_info.product_cols }}">
             {% for product in col %}
-              <td class="product-data"
+              <li class="product-data"
                     onclick="window.location='{% url "lfs.catalog.views.product_view" product.slug %}'">
-                    <div class="product-image col-md-4">
+                    <div class="product-image">
                         <a href="{% url "lfs.catalog.views.product_view" product.slug %}">
                             {% if product.image.url_200x200 %}
                                 <img alt="{{ product.name }}"
@@ -26,7 +26,7 @@
                             {% endif %}
                         </a>
                     </div>
-                    <div class="product-details col-md-8">
+                    <div class="product-details">
                         <div class="product-title">{{ product.name }}</div>
                         <div class="product-description">{{ product.obj.get_short_description|safe|truncatewords_html:60 }}</div>
                     </div>
@@ -75,11 +75,11 @@
                     
                        
                    
-                </td>
+                </li>
             {% endfor %}
-        </tr>
+        </ul>
         {% endfor %}
-    </table>
+    </div>
 	
 	{% include "front/catalog/categories/product/products_navigation.html" %}
 	

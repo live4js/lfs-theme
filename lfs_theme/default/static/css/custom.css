@@ -1,9 +1,10 @@
 /* Only applies while screen is 980px or less */
 @media (max-width: 768px) {
-	.container {
-		width: 100%;
-	}
 	
+	body {
+	font-size: 12px !important; 
+	}
+
 	.btn-default, .btn-success, 
 	.btn-info, .btn-primary {
 		width: 100%;
@@ -52,6 +53,25 @@
 		font-size: 12px;
 	}
 	
+	/* Product rows */
+	#product-row li {
+		width: 100% !important;
+	}
+
+	#product-row .product-image {
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	#product-row .product-details {
+		padding-top: 10px;
+		text-align: center; 
+	}
+
+	#product-row .product-price {
+		padding: 10px 0 0 0;
+		text-align: center;
+	}
 }
 
 /* only applies while screen is 980px or greater */
@@ -90,13 +110,9 @@
 #top-menu {
 	border-bottom: 1px solid #0055AA;
 	box-shadow: 0 1px 0 rgba(255,255,255,.1);
-}
-
-/* Login Button
---------------------------------*/
-#top-menu {
 	position: relative;
-	z-index: 1;		
+	z-index: 1;
+	height:30px;
 }
 
 #top-menu #login {
@@ -104,7 +120,8 @@
 	padding: 5px 15px;
 }
 
-#top-menu a:hover {
+#top-menu a:hover, #top-menu a:active,
+#top-menu a:focus {
 	text-decoration: none;		
 }
 
@@ -133,7 +150,7 @@
 #top-menu .dropdown-menu {
 	border-radius: 0;
 	margin-right: 6px;
-	margin-top: 28px;
+	margin-top: 0px;
 }
 
 #top-menu .btn-default .caret {
@@ -265,16 +282,12 @@
 
 /* Category Page
 ------------------------------------*/
-.category .lfs-default .product-details {
-	padding-left: 30px;
-}
-
 .category .product-title {
 	font-size: 12px; 
 }
 
 .category .product-title:hover { 
-	    color: #336699;
+	color: #336699;
 }
 
 .category #pager .pagination {
@@ -287,7 +300,7 @@
 	color: #FFFFFF;
 	padding: 8px 15px;
 	border: 0;
-        transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
 } 
 
 .category .btn-success:hover,
@@ -295,6 +308,133 @@
 	background: none repeat scroll 0 0 #AAAAAA;
 	color: #FFFFFF;
 	text-decoration: none;
+}
+
+/* Product_cols */
+.lfs-default ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.category .product-data {
+	border: 1px solid #EEEEEE;
+	height: auto; 
+	padding: 10px;
+}
+
+.category .product-data:hover {
+	box-shadow: 0 0 15px -8px #2A7FD3;
+	cursor: pointer;
+	color: #333333;
+}
+
+/* Product rows 1 */c
+.product-row-1 li {
+	width:100%;
+}
+
+.product-row-1 .product-image {
+	margin: 0 auto;
+    width: 100%;
+}
+
+.product-row-1 .product-details {
+	padding-top: 10px;
+	text-align: center; 
+}
+
+.product-row-1 .product-price {
+	padding: 10px 0 0 0;
+	text-align: center;
+}
+
+.product-row-1 .product-price .btn-success {
+	width: 100%;
+}
+
+/* Product rows 2 */
+.product-row-2 li {
+	display: inline-block;
+    margin-bottom: 4px;
+    width: 49%;
+}
+
+.product-row-2 .product-image {
+	margin: 0 auto;
+    width: 100%;
+}
+
+.product-row-2 .product-details {
+	padding-top: 10px;
+	text-align: center; 
+}
+
+.product-row-2 .product-price {
+	padding: 10px 0 0 0;
+	text-align: center;
+}
+
+.product-row-2 .product-price .btn-success {
+	width: 100%;
+}
+
+/* Product rows 3 */
+.product-row-3 li {
+	display: inline-block;
+    margin-bottom: 4px;
+    width: 33%;
+}
+
+.product-row-3 .product-image {
+	margin: 0 auto;
+}
+
+.product-row-3 .product-image img{
+    width: 100%;
+}
+
+.product-row-3 .product-details {
+	padding-top: 10px;
+	text-align: center; 
+}
+
+.product-row-3 .product-price {
+	padding: 10px 0 0 0;
+	text-align: center;
+}
+
+.product-row-3 .product-price .btn-success {
+	width: 100%;
+}
+
+/* Product rows 4 */
+.product-row-4 li {
+	display: inline-block;
+    margin-bottom: 4px;
+    width: 24%;
+}
+
+.product-row-4 .product-image {
+	margin: 0 auto;
+}
+
+.product-row-4 .product-image img{
+    width: 100%;
+}
+
+.product-row-4 .product-details {
+	padding-top: 10px;
+	text-align: center; 
+}
+
+.product-row-4 .product-price {
+	padding: 10px 0 0 0;
+	text-align: center;
+}
+
+.product-row-4 .product-price .btn-success {
+	width: 100%;
 }
 
 /* Product Page
@@ -379,6 +519,11 @@
 	text-decoration:none;
 	font-size: 120%;
 	color: #000;
+}
+
+#attachments a:hover {
+	color: #0066BB;
+
 }
 
 /* Customer Login
@@ -679,6 +824,7 @@
 }
 
 .search-results #search-results .btn-default {
+	height: 34px; 
 	transition: all 0.4s ease 0s;
 }
 

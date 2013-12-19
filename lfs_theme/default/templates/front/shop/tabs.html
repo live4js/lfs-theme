@@ -23,15 +23,5 @@
                 </a>                                
             </li>            
         {% endfor %}
-		
-			<form id="search-form" class="navbar-form navbar-right" role="search" action="{% url "lfs_search" %}" autocomplete="off">
-					<div class="form-group" >
-					<input type="hidden" name="livesearch" value="1" />
-					<input id="search-input" class="form-control" type="text" name="q" autocomplete="off" data-url="{% url "lfs_livesearch" %}" placeholder="{% trans 'Search' %}" />
-					</div>
-					<input type="submit" value="{% trans 'Go!' %}" class="btn btn-default"/>
-			</form>
-		
-
 		</ul>
 </div>
