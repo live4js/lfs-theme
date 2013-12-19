@@ -44,10 +44,8 @@
     <body class="{% block section %}lfs{% endblock %}">	
 	<div id="wrapper" class="container">
 	<!-- header begins -->
-	<div id="header">
+	<div id="header" class="row">
 	{% block header %}
-
-		<div id="top-menu" class="row">
 
 		<!-- Login -->
 		<div id="top-menu"  class="col-md-12">
@@ -80,7 +78,7 @@
 						
 						<li class="divider"></li>
 						<li><a href="/logout">{% trans 'Logout' %}</a></li>
-						<li><a href="{% url "lfs_my_account" %}">{% trans 'My account' %}</a></li>
+						<li><a href="{% url "lfs_my_account" %}"> {% trans 'My account' %} </a></li>
                         {% else %}
                             {% if not ANON_ONLY %}
                                 <a href="{% url "lfs_login" %}">{% trans 'Login' %}</a>
@@ -92,8 +90,6 @@
 			</div>
 		</div>
 		<!-- Login ends -->
-	
-		</div>
 
 		<div id="logo" class="col-md-12">
 			<a href="{% url "lfs.core.views.shop_view" %}">
@@ -201,5 +197,6 @@
         {% endblock %}
         {% block google-analytics-ecommerce %}{% endblock %}
 	</div>
+</div>
     </body>
 </html>

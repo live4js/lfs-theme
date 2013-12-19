@@ -406,7 +406,7 @@ $(document).ajaxSend(function(event, xhr, settings) {
     }
 });
 
-$('.voucher').ready(function() {
+function check_voucher() {
 	if(window.location.hash) {
 	var hash = window.location.hash.substring(1);
 		if (hash == 'coupon') { 
@@ -414,13 +414,16 @@ $('.voucher').ready(function() {
 		} else {
 			$('.voucher').hide();
 		}
-	}  else {
-		$('.voucher').hide();
 	}
+
+}
+
+$(window).bind('hashchange', function(event) {
+	check_voucher();
+});
+
+$(document).ready(function() {
+	check_voucher();
 });
 
 
-function replace_product_row() {
-
-			$(".product-data").addClass("full-width");
-};

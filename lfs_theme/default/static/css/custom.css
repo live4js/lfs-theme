@@ -1,5 +1,8 @@
 /* Only applies while screen is 980px or less */
 @media (max-width: 768px) {
+	.container {
+		width: 100%;
+	}
 	
 	.btn-default, .btn-success, 
 	.btn-info, .btn-primary {
@@ -608,6 +611,11 @@
 	font-weight: bold;
 }
 
+.cart #cart-form .col-md-6 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .added-to-cart .page-header,
 .added-to-cart #cart-items,
 .added-to-cart .form-actions  {
@@ -642,6 +650,15 @@
 	background-color: #47A447;
 	border: 1px solid #47A447;
 	color: #FFFFFF;
+}
+
+.added-to-cart .btn-default {
+	background-color: #EFEFEF;
+}
+
+.added-to-cart .btn-default:hover {
+	background-color: #EEEEEE;
+	border-color: EFEFEF; 
 }
 
 .form-actions .btn-primary, .form-actions .btn-success,

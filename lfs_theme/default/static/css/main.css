@@ -60,6 +60,85 @@ em {
     font-style: italic;
 }
 
+ .row {
+	width: 100%;
+	margin: 0;
+ }
+ 
+ 
+.row:before,
+.form-control {
+	height: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 980px;
+  }
+}
+
+audio,
+.breadcrumb > li + li:before {
+	content: none;
+}
+
+.form-control {
+	height: auto;
+	border-radius: 0;
+	border: 1px solid #EEE;
+}
+
+.navbar-toggle {
+	float:none;
+}
+
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.428571429;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	border-radius:0;
+	-webkit-user-select: none;
+}
+
+.btn-success, .btn-primary,
+.btn-info {
+	color: #ffffff !important;
+	transition: all 0.4s ease 0s;
+}
+
+.btn-default {
+	border: 1px solid #EEEEEE;
+	transition: all 0.4s ease 0s;
+}
+
+ .page-header {
+	margin: 14px 0 20px;
+}
+
+.container {
+	padding-left: 0;
+	padding-right:0; 
+}
+
 /* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
@@ -80,10 +159,6 @@ td.label {
 
 .label {
     padding-bottom: 4px;
-}
-
-.btn-default {
-	background-color: #F0F0F0; 
 }
 
 .contact-form  #id_message {
@@ -291,9 +366,6 @@ table.search-results {
 	margin-left: -50px;
 }
 
-#search-form .btn-default {
-        transition: all 0.4s ease 0s;
-}
 #search-form .btn-default:hover {
 	background: none repeat scroll 0 0 #2A7FD3;
 	border: 1px solid #2A7FD3;
