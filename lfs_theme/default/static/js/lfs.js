@@ -343,7 +343,7 @@ $(function() {
     }
 
     $("#id_invoice-firstname,#id_invoice-lastname,#id_invoice-line1,#id_invoice-line2,#id_invoice-city,#id_invoice-state,#id_invoice-cpde").live("change", function() {
-    	save_invoice_address();
+            save_invoice_address();
     });
 
     $(".update-checkout").live("click", function() {
@@ -351,17 +351,17 @@ $(function() {
     });
 
     $("#id_invoice-country").live("change", function() {
-    	update_invoice_address();
+            update_invoice_address();
         update_checkout();
     });
 
     $("#id_shipping-country").live("change", function() {
-    	update_shipping_address();
+            update_shipping_address();
         update_checkout();
     });
 
     $("#id_shipping-firstname,#id_shipping-lastname,#id_shipping-line1,#id_shipping-line2,#id_shipping-city,#id_shipping-state,#id_shipping-cpde").live("change", function() {
-    	save_shipping_address();
+            save_shipping_address();
     });
 
 
@@ -406,21 +406,23 @@ $(document).ajaxSend(function(event, xhr, settings) {
     }
 });
 
-$('.voucher').ready(function() {
-	if(window.location.hash) {
-	var hash = window.location.hash.substring(1);
-		if (hash == 'coupon') { 
-			$('.voucher').show();
-		} else {
-			$('.voucher').hide();
-		}
-	}  else {
-		$('.voucher').hide();
-	}
+function check_voucher() {
+        if(window.location.hash) {
+        var hash = window.location.hash.substring(1);
+                if (hash == 'coupon') { 
+                        $('.voucher').show();
+                } else {
+                        $('.voucher').hide();
+                }
+        }
+
+}
+
+$(window).bind('hashchange', function(event) {
+        check_voucher();
 });
 
+$(document).ready(function() {
+        check_voucher();
+});
 
-function replace_product_row() {
-
-			$(".product-data").addClass("full-width");
-};
