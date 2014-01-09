@@ -44,16 +44,14 @@
     <body class="{% block section %}lfs{% endblock %}">	
 	<div id="wrapper" class="container">
 	<!-- header begins -->
-	<div id="header">
+	<div id="header" class="row">
 	{% block header %}
-
-		<div id="top-menu" class="row">
 
 		<!-- Login -->
 		<div id="top-menu"  class="col-md-12">
 			<div id="login" class="btn btn-default pull-right">
 				<a data-toggle="dropdown" href="#">
-					<i class="icon-user"></i> {% if user.is_authenticated %}
+					<i class="glyphicon glyphicon-user"></i> {% if user.is_authenticated %}
                             {% if user.first_name %}
                                 <span>{{ user.first_name }} {{user.last_name}}</span>
                             {% else %}
@@ -80,7 +78,7 @@
 						
 						<li class="divider"></li>
 						<li><a href="/logout">{% trans 'Logout' %}</a></li>
-						<li><a href="{% url "lfs_my_account" %}">{% trans 'My account' %}</a></li>
+						<li><a href="{% url "lfs_my_account" %}"> {% trans 'My account' %} </a></li>
                         {% else %}
                             {% if not ANON_ONLY %}
                                 <a href="{% url "lfs_login" %}">{% trans 'Login' %}</a>
@@ -92,19 +90,25 @@
 			</div>
 		</div>
 		<!-- Login ends -->
-	
-		</div>
-
-		<div id="logo" class="col-md-12">
+		<div class="row">
+		<div id="logo" class="col-md-8">
 			<a href="{% url "lfs.core.views.shop_view" %}">
 				<img class="logo" src="{{ STATIC_URL }}img/logo.png" alt="Logo" />
 			</a>
 		</div>
-
-		<div class="container livesearch-wrapper">
-                 <div id="livesearch-result"></div>
+		<div id="search" class="col-md-4">
+				<form id="search-form" class="navbar-form navbar" role="search" action="{% url "lfs_search" %}" autocomplete="off">
+				<div class="form-group" >
+				<input type="hidden" name="livesearch" value="1" />
+				<input id="search-input" class="form-control" type="text" name="q" autocomplete="off" data-url="{% url "lfs_livesearch" %}" placeholder="{% trans 'Search' %}" />
+				</div>
+				<input type="submit" value="{% trans 'Go!' %}" class="btn btn-default"/>
+				</form>
+		<div class="livesearch-wrapper">
+                <div id="livesearch-result"></div>
 		</div>
 
+		</div></div>
 		{% endblock %}
 	</div>
 	<!-- header ends -->
@@ -175,6 +179,7 @@
 			</div>	 
 		</div>
 		{% endblock %}
+	</div>
 	<!--End Main Content -->	
 	<!-- Begin Footer -->
         <div id="footer">
@@ -200,6 +205,6 @@
             {% google_analytics_tracking %}
         {% endblock %}
         {% block google-analytics-ecommerce %}{% endblock %}
-	</div>
+</div>
     </body>
 </html>

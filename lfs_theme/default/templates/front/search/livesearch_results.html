@@ -28,9 +28,7 @@
                             {{ property.title }} : {{ property.value }} {{ property.unit|safe }}
                         </div>
                     {% endfor %}
-                </td>
-                <td class="number"
-                    nowrap="nowrap">
+
                     <div class="price">
                         {{ product|get_price_gross:request|currency:request}}* {% if product.get_price_unit %}/ {{ product.get_price_unit }}{% endif %}
                     </div>

@@ -35,29 +35,32 @@
 
     {% if products %}
 
+	<div id="pagination" class="col-md-12">
         {% if not paginator %}
             {% autopaginate products 10 %}
         {% endif %}
         {% paginate %}
+	</div>
+
         {% sorting %}
 
         <table class="lfs-default padding-top">
-            <tr>
-                <th id="image">{% trans 'Image' %}</th>
-                <th id="product-name">{% trans 'Product' %}</th>
-                <th class="number">{% trans 'Price' %}</th>
-                <th></th>
-            <tr>
+            <!--tr>
+                <th id="image" class="col-md-1">{% trans 'Image' %}</th>
+                <th id="product-name" class="col-md-8">{% trans 'Product' %}</th>
+                <th class="number col-md-2">{% trans 'Price' %}</th>
+                <th class="col-md-1"></th>
+            <tr -->
             {% for product in products %}
                 <tr>
-                    <td id="image">
+                    <td id="image" class="col-md-1">
                         <a href="{{ product.get_absolute_url }}" class="preview-100-100">
                             <img src="{{ product.get_image.image.url_100x100 }}"
                                  alt="{{ product.get_name }}"
                                  title="{{ product.get_name }}" />
                         </a>
                     </td>
-                    <td id="product-name">
+                    <td id="product-name" class="col-md-9">
                         <a href="{{ product.get_absolute_url }}">
                             {{ product.get_name }}
                         </a>
@@ -74,7 +77,7 @@
                         {% endfor %}
                     </td>
 
-                    <td class="number">
+                    <td class="number col-md-2">
                         <div class="product-price">
                             {% if product.for_sale %}
                                <span class="for-sale-standard-price">{{ product.get_standard_price|currency:request }}</span>
@@ -92,8 +95,6 @@
                                 {% trans '*inc. VAT' %}
                             </div>
                         </div>
-                    </td>
-                    <td class="buttons">
                         <a class="btn btn-info button emphasized"
                            href="{% url "lfs_product" product.slug %}"
                            type="submit">
@@ -103,6 +104,12 @@
                 </tr>
             {% endfor %}
         </table>
+	<div id="pagination" class="col-md-12">
+        {% if not paginator %}
+            {% autopaginate products 10 %}
+        {% endif %}
+        {% paginate %}
+	</div>
 </div>
     {% endif %}
 {% endblock %}
