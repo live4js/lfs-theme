@@ -4,17 +4,17 @@
 {% if cart_items %}
 	<div class="voucher col-md-12">
 	
-    <div class="portlet-header">
-        {% trans "Voucher" %}
-    </div>
+		<div class="portlet-header">
+		{% trans "Voucher" %}
+		 </div>
 	
-    <input data="{% url "lfs_check_voucher_cart" %}"
-           type="text"
-           id="voucher"
-           name="voucher"
-           value="{{ voucher_number }}"
-           size="30" 
-	class="col-md-12" />
+		<input data="{% url "lfs_check_voucher_cart" %}"
+		type="text"
+           	id="voucher"
+           	name="voucher"
+           	value="{{ voucher_number }}"
+           	size="30" 
+		class="col-md-12" />
 	</div>
 	
 	<div id="cart-table" class="col-md-12">
@@ -96,11 +96,13 @@
 
                     </td>
                     <td class="number">
-                        <div><input class="form-control number cart-amount"
-                               type="text"
-                               name="amount-cart-item_{{ cart_item.obj.id }}"
-                               size="6"
-                               value="{{ cart_item.quantity }}" /></div>
+                        <div>
+				<input class="form-control number cart-amount"
+                              	type="text"
+                               	name="amount-cart-item_{{ cart_item.obj.id }}"
+                               	size="6"
+                               	value="{{ cart_item.quantity }}" />
+			</div>
 			<div>
                         {% if cart_item.product.unit %}
                             {{ cart_item.product.unit }}
@@ -187,7 +189,7 @@
                 <div>
                     {% trans 'Country' %}:
 		</div>
-				<div>
+		<div>
                     <select class="form-control cart-country"
                             name="country">
                         {% for country in countries %}
@@ -197,7 +199,7 @@
                             </option>
                         {% endfor %}
                     </select>
-			</div></div>
+		</div></div>
 		<!-- End Country -->
 
 		<!-- Shipping -->
@@ -245,6 +247,7 @@
 		<div class="price">
 		{{ max_delivery_time }}
                 </div></div>
+
 		<div id="shipping-price">
                 <div>
                     {% trans 'Shipping' %}:
@@ -257,7 +260,7 @@
                 <div>
                     {% trans 'Payment' %}:
                 </div>
-               <div class="price">
+               	<div class="price">
                     {{ payment_price|currency:request }}
                 </div></div>
 
@@ -278,8 +281,8 @@
                 </div></div>
 	</div>
 
-		<div class="buttons col-span-12">
-                        <a class="btn default btn-info"
+		<div class="buttons col-md-12">
+                        <a class="btn btn-info"
                            href="{{ shopping_url }}">
                             {% trans 'Go on shopping' %}
                         </a>
@@ -288,19 +291,21 @@
                            {% trans 'Checkout' %}
                         </a>
 		</div>
-	</div></div>
-    </form>
+
 	</div>
+	</div>
+    </form>
+</div>
 {% else %}
 	
     <div id="empty cart" class="col-md-12">
 	<div class="alert alert-info">
          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         {% trans 'Your Cart is empty' %}
-      </div>
-    <a class="btn default btn-info"
-       href="{{ shopping_url }}">
-       {% trans 'Go on shopping' %}
-    </a> 
+	</div>
+	<a class="btn default btn-info"
+	href="{{ shopping_url }}">
+	{% trans 'Go on shopping' %}
+	</a> 
     </div>
 {% endif %}
