@@ -534,19 +534,14 @@
 	padding-top: 15px; 
 }
 
-.add-review .btn-success {
-	margin-top: 2%;
-	float: right;
-	background-color: #5BC0DE;
-	border-color: #46B8DA;
-	color: #FFFFFF !important;
-	transition: all 0.4s ease 0s;
+.add-review .form-horizontal .form-actions {
+	text-align: right; 
 }
 
-.add-review .btn-success:hover  {
-	background-color: #39B3D7;
-	border-color: #269ABC;
-	color: #FFFFFF;
+.add-review #send { 
+	margin-top: 6px;
+	padding-left: 24px;
+	padding-right: 24px;  
 }
 
 #attachments a {
@@ -861,7 +856,7 @@
 }
 
 .search-results #search-results .form-control {
-	display: -moz-box;
+	display: inline-block;
 	width: auto;
 	margin-right: -1px; 
 }

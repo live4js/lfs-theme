@@ -1352,7 +1352,7 @@ ___________________________________________________________________________ */
 -------------------------------------------------------------- */
 .buttons {
 	text-align: right;
-    margin-top: 10px;
+	margin-top: 10px;
 }
 
 .delete-button {
@@ -1384,7 +1384,7 @@ button[type] {
   padding:4px 10px 3px 7px;   /* IE7 */
 }
 
-button img,
+.button img,
 a.button img {
   margin:0 3px -3px 0 !important;
   padding:0;
@@ -1438,76 +1438,50 @@ a.button img {
 /* share on Thank You page */
 
 .shareprod-thanks {
-
-width: 612px;
-
-float: left;
-
-height: 161px;
-
-border: solid 1px #9d7eb9;
-
-padding: 5px;
-
-border-radius: 7px;
-
-margin-bottom: 10px;
+	width: 612px;
+	float: left;
+	height: 161px;
+	border: solid 1px #9d7eb9;
+	padding: 5px;
+	border-radius: 7px;
+	margin-bottom: 10px;
 
 }
 
 .shareprod-thanks img {
-
-float: left;
-
-margin-right: 3px;
-
+	float: left;
+	margin-right: 3px;
 }
 
-.shareprod-thanks  h3 {
-
-color: #000;
-
-font-style:italic;
-
-font-size: 14px;
-
-width: 610px;
-
-overflow: hidden;
-
+.shareprod-thanks h3 {
+	color: #000;
+	font-style:italic;
+	font-size: 14px;
+	width: 610px;
+	overflow: hidden;
 }
 
-.shareprod-thanks  .sharemsg {
-
-width: 652px;
-
-overflow: hidden;
-
+.shareprod-thanks .sharemsg {
+	width: 652px;
+	overflow: hidden;
 }
 
-.shareprod-thanks  .sharedesc {
-
-color: #000;
-
-font-style: normal;
-
-font-size: 13px;
-
-width: 524px;
-
-float: left;
-
-height: 70px;
-
-overflow: hidden;
-
+.shareprod-thanks .sharedesc {
+	color: #000;
+	font-style: normal;
+	font-size: 13px;
+	width: 524px;
+	float: left;
+	height: 70px;
+	overflow: hidden;
 }
 
 .share-thankbuttons {
-width: 200px;
-height: 40px;
-float: left;
-margin-lefT: 120px;
-margin-top: -50px;
+	width: 200px;
+	height: 40px;
+	float: left;
+	margin-left: 120px;
+	margin-top: -50px;
 }
 /* end share on TY page */
+

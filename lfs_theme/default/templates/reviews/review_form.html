@@ -4,6 +4,7 @@
 {% block section %}add-review {% endblock %}
 
 {% block content %}
+
 	<div class="page-header">
 		<h1>{% trans 'Add Review' %} {% trans "for" %} {{ object.get_name }}</h1>
 	</div>
@@ -16,8 +17,8 @@
     <br clear="all" />
 
     <form action="{% url "reviews_add" content_type_id content_id %}"
-          method="post"
-		  class="form-horizontal">
+	method="post"
+	class="form-horizontal">
         {% csrf_token %}
         {% if request.user.is_anonymous %}
             <div class="control-group">
@@ -83,14 +84,14 @@
            
 
             {% if form.comment.errors %}
-                <div class="error">
+		<div class="error">
                     {{ form.comment }}
                     {{ form.comment.errors }}
-                </div>
+ 		</div>
             {% else %}
-                <div>
+		<div>
                     {{ form.comment }}
-                </div>
+		</div>
             {% endif %}
         </div>
 
@@ -107,17 +108,19 @@
                name="content_id"
                value="{{ content_id }}" />
 
-        <div class="form-actions">
-		{% if show_preview %}
-            <input type="submit"
-                   value="{% trans 'Preview' %}" 
-				   class="btn btn-info btn-large"/>
+	<div class="form-actions">
+	{% if show_preview %}
+	<input type="submit"
+		value="{% trans 'Preview' %}"
+		id="preview"
+		class="btn btn-success" />
         {% else %}
-            <input type="submit"
-                   value="{% trans 'Send' %}" 
-				   class="btn btn-success btn-large"/>
+	<input type="submit"
+		value="{% trans 'Send' %}"
+		id="send" 
+		class="btn btn-info" />
         {% endif %}
-		</div>
+	</div>
 
     </form>
 
