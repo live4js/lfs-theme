@@ -183,43 +183,42 @@
 
     <br clear="both">
     {% if product.is_deliverable %}
-        <table align="right" class="buttons">
-            <tr>
+        <div class="buttons">
                 {% if product.get_active_packing_unit %}
-                    <td>
-                        <div class="product-quantity packing-unit"
+						<div class="product-quantity packing-unit col-md-12"
                             id="packing-url"
                             data="{% url "lfs_calculate_packing" product.id %}">
-                            <input class="number quantity col-md-12"
+                            <input class="number quantity"
                                    name="quantity"
                                    size="3"
                                    type="text"
                                    value="{{ quantity }}" /> {{ unit }}
                         </div>
-                    </td>
                 {% else %}
-                    <td id="quantity">
+                    <div id="quantity" class="row">
+					<div class="quantity-name">
                         {% if unit %}
                             {{ unit }}:
                         {% else %}
                             {% trans "Quantity" %}:
                         {% endif %}
-                    </td>
-                    <td class="product-quantity">
+                    </div>
+                    <div class="product-quantity">
                         <input class="form-control number"
                                name="quantity"
                                size="3"
                                type="text"
                                value="{{ quantity }}" />
-                    </td>
+                    </div>
+					</div>
                 {% endif %}
-                <td nowrap="nowrap">
+                <div id="add-to-cart" class="row padding-top">
                     <button class="btn btn-success"
                            type="submit"
                            name="add-to-cart">{% trans 'Add to cart' %}</button>
-                </td>
-            </tr>
-        </table>
+                </div>
+        </div>
+		
         <div class="packing-result">
             {{ packing_result }}
         </div>
@@ -321,17 +320,17 @@
 		{% endif %}
 	</ul>
 	<div class="tab-content">
-		<div id="description" class="tab-pane active">
+		<div id="description" class="tab-pane fade in active">
 			<p class="product-description">
 			{{ product.get_description|safe}}
 			</p>
 		</div>
 		{% if attachments %}
-		<div id="attachments" class="tab-pane">
+		<div id="attachments" class="tab-pane fade">
 			{% for attachment in attachments %}
-            <div class="item">
+            <div class="item padding-top">
                 <div class="title">
-                    <a title="{{ attachment.title}}" href="{{ attachment.get_url }}">
+                   <a title="{{ attachment.title}}" href="{{ attachment.get_url }}"> <i class="glyphicon glyphicon-file"></i>
                         {{ attachment.title}}
                     </a>
                 </div>
@@ -346,19 +345,19 @@
 		{% endif %}
 		
 		{% if product_accessories %}
-        <div id="accessories" class="tab-pane">
-            <table class="table table-bordered">
+        <div id="accessories" class="tab-pane fade">
+            <table class="table table-bordered padding-top">
                 <tr>
-                    <th></th>
-                    <th>{% trans 'Name' %}</th>
-                    <th class="number">{% trans 'Quantity' %}</th>
-                    <th class="number">{% trans 'Price' %}</th>
-                    <th class="number last">{% trans 'Total' %}</th>
+                    <th class="col-md-1"></th>
+                    <th class="col-md-8">{% trans 'Name' %}</th>
+                    <th class="number col-md-1">{% trans 'Quantity' %}</th>
+                    <th class="number col-md-1">{% trans 'Price' %}</th>
+                    <th class="number last col-md-1">{% trans 'Total' %}</th>
                 </tr>
                 {% for product_accessory in product_accessories %}
                     <tr>
-                        <td class="checkbox-left">
-                            <input type="checkbox"
+                        <td class="checkbox-left" style="text-align:center; vertical-align:middle; ">
+                            <input class="center" type="checkbox"
                                    name="accessory-{{ product_accessory.accessory.id }}"/>
                         </td>
                         <td>
