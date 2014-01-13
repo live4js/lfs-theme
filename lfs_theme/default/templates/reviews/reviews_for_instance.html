@@ -40,8 +40,9 @@
         </div>
     {% else %}
         <div class="control-group">
-            <a class="btn btn-primary left"
-               href="{% url "reviews_add" content_type_id content_id %}"><i class="icon-plus-sign icon-white"></i>&nbsp;&nbsp;{% trans 'Add review' %}</a>
+            <a class="btn default btn-info"
+		href="{% url "reviews_add" content_type_id content_id %}"><span class="glyphicon glyphicon-star"></span>
+		{% trans 'Add review' %}</a>
         </div>
     {% endif %}
 </div>

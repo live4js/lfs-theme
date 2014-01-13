@@ -485,9 +485,10 @@ table.search-results {
 
 .breadcrumbs {
 	background-color: #F5F5F5;
+	border-bottom:1px solid #EEEEEE; 
 	list-style: none outside none;
 	padding: 8px 15px;
-	margin-bottom: 0px;
+	margin-bottom: 4px;
 }
 
 .breadcrumbs > li {
@@ -1213,9 +1214,12 @@ ___________________________________________________________________________ */
 }
 
 .cart-portlet .portlet-footer a {
+	background: url("../img/arrows.png") no-repeat scroll left center rgba(0, 0, 0, 0);
 	color: #FFFFFF;
-	font-weight: bold;
-	background: url("../img/portlet_cart.png") no-repeat scroll left center / 20px auto rgba(0, 0, 0, 0);
+	font-size: 12px;
+	padding-left:0;
+	padding-left: 22px;
+	transition: all 0.4s ease 0s;
 }
 
 /* Categories portlet */

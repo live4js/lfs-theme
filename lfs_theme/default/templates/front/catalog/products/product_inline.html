@@ -185,37 +185,38 @@
     {% if product.is_deliverable %}
         <div class="buttons">
                 {% if product.get_active_packing_unit %}
-						<div class="product-quantity packing-unit col-md-12"
-                            id="packing-url"
-                            data="{% url "lfs_calculate_packing" product.id %}">
-                            <input class="number quantity"
-                                   name="quantity"
-                                   size="3"
-                                   type="text"
-                                   value="{{ quantity }}" /> {{ unit }}
-                        </div>
-                {% else %}
-                    <div id="quantity" class="row">
-					<div class="quantity-name">
+	<div class="product-quantity packing-unit col-md-12"
+		id="packing-url"
+		data="{% url "lfs_calculate_packing" product.id %}">
+		<input class="number quantity"
+		name="quantity"
+		size="3"
+		type="text"
+		value="{{ quantity }}" /> {{ unit }}
+	</div>
+		{% else %}
+		<div id="quantity" class="row">
+			<div class="quantity-name">
                         {% if unit %}
                             {{ unit }}:
                         {% else %}
                             {% trans "Quantity" %}:
                         {% endif %}
-                    </div>
-                    <div class="product-quantity">
-                        <input class="form-control number"
+		</div>
+		<div class="product-quantity">
+			<input class="form-control number"
                                name="quantity"
                                size="3"
                                type="text"
                                value="{{ quantity }}" />
-                    </div>
+		</div>
 					</div>
                 {% endif %}
                 <div id="add-to-cart" class="row padding-top">
                     <button class="btn btn-success"
                            type="submit"
-                           name="add-to-cart">{% trans 'Add to cart' %}</button>
+                           name="add-to-cart"><span class="glyphicon glyphicon-shopping-cart"></span>
+{% trans 'Add to cart' %}</button>
                 </div>
         </div>
 		
