@@ -316,13 +316,13 @@ table.search-results {
     font-weight: bold;
 }
 
+#search .navbar-form {
+	box-shadow: 0 0px 0 rgba(255, 255, 255, 0.1);
+} 
+
 #search-form {
 	padding-top: 10px;
 	position: relative;
-}
-
-#search-form {
-	margin: 10px 0 0;
 }
 
 #search-form,
