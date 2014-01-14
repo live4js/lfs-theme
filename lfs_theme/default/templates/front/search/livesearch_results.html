@@ -2,7 +2,9 @@
 {% if products %}
     <table id="livesearch-results-table">
         {% for product in products %}
-            <tr class="{% cycle 'even' 'odd' %}"
+         <a href="{{ product.get_absolute_url }}">
+
+		<tr class="{% cycle 'even' 'odd' %}"
                 onclick="window.location='{{ product.get_absolute_url }}'">
                 <td class="image">
                     {% if product.get_image %}
@@ -39,6 +41,7 @@
                     {% endif %}
                 </td>
             </tr>
+	</a>
         {% endfor %}
         <tr>
             <td class="all-results"
@@ -50,5 +53,5 @@
         </tr>
     </table>
 {% else %}
-    <p>{% trans 'No products found' %}</p>
+    <p class="col-md-12 col-sm-12 padding-top padding-bottom">{% trans 'No products found' %}</p>
 {% endif %}
