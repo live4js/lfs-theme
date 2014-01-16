@@ -355,19 +355,21 @@ table.search-results {
 	display: inline-block;
 }
 
-#search-form .btn-default, 
-.search-results-form .btn-default {
+#search-form .btn-default {
 	background: none repeat scroll 0 0 #46B8DA;
 	border: 1px solid #46B8DA;
-	margin-left: -4px;
+	margin-left: -6px;
 	height: 34px;
 	color: #FFFFFF;
 }
 
-#search-form .btn-default:hover,
-.search-results-form .btn-default:hover {
+#search-form .btn-default:hover {
 	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125) inset;
 	outline: 0 none;
+}
+
+#search-form .form-control {
+	height: 32px;
 }
 
 .livesearch-wrapper {
@@ -1200,8 +1202,8 @@ ___________________________________________________________________________ */
 }
 
 .cart-portlet .portlet-footer {
-    background: #4CAE4C;
-    border: 1px solid #EEEEEE;
+    background: #46B8DA;
+    border: 1px solid #46B8DA;
     border-top: none;
     padding: 5px 10px;
     font-size: 80%;
@@ -1210,7 +1212,7 @@ ___________________________________________________________________________ */
 }
 
 .cart-portlet .portlet-footer:hover {
-	background: #47A447;
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125) inset;
 }
 
 .cart-portlet .portlet-footer a {
