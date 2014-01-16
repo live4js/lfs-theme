@@ -419,14 +419,14 @@ table.search-results {
 }
 
 #livesearch-result {
-	background-color: #FFFFFF;
-	border: 1px solid #DFD7D3;
+	width: 100%;
 	display: none;
-	left: 14px;
+	background-color: #FFFFFF;
+	border: 1px solid #EEEEEE;
+	top: 16px;
+	left: 15px;
 	position: absolute;
-	top: 28px;
 	z-index: 1000;
-	width: 100%
 }
 
 #livesearch-result .price {
@@ -1222,21 +1222,33 @@ ___________________________________________________________________________ */
 	transition: all 0.4s ease 0s;
 }
 
-/* Categories portlet */
-.categories-portlet .portlet-body {
-	padding-left:0 !important;
+/* Categories portlet 
+__________________________________________________________*/
+.categories-portlet ul {
+	padding-left:0; 
 }
 
-.categories-portlet .portlet-body li ul li {
-	padding-left: 15px;
+.categories-portlet li a {
+	padding:10px 6px 10px 10px;
+	border-bottom: 1px solid #EEE;
+	font-weight: bold;
+	font-size: 13px;
 }
 
-.categories-portlet ul ul {
-    padding: 4px 4px 0 6px;
+.categories-portlet li a:hover {
+	background: #EEEEEE;
 }
 
-.categories-portlet ul ul ul {
-	padding-left: 0px;
+.categories-portlet li li a {
+	padding-left: 12px;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.categories-portlet li li li a {
+	padding-left: 14px;
+	font-weight: normal;
+	font-size: 11px;
 }
 
 .categories-portlet ul ul ul ul {
@@ -1244,42 +1256,19 @@ ___________________________________________________________________________ */
 }
 
 .categories-portlet a {
-	padding-left: 15px;
 	text-decoration: none;
 }
 
 .categories-portlet a.current {
-	font-weight: bold;
-}
-
-.categories-portlet li.level-0 {
-    border-bottom: 1px solid #EEEEEE;
-    padding: 10px 0;
-}
-
-.categories-portlet li.level-0.last {
-    border-bottom: none;
+	color: #0066AA;
 }
 
 .categories-portlet li.level-0 a {
-    display: block;
+	display: block;
 }
 
-.categories-portlet li.level-0 a.current,
-.categories-portlet li.level-0 a:hover {
-}
-
-.categories-portlet li.level-1,
-.categories-portlet li.level-2 {
-    padding: 5px 0;
-    /*font-size: 90%;*/
-}
-
-.categories-portlet li.level-1 a,
-.categories-portlet li.level-1 a.current,
-.categories-portlet li.level-1 a:hover {
-    padding: 0;
-    background: transparent;
+.categories-portlet #category-nav {
+	border-bottom:0px; 
 }
 
 /* Average rating portlet

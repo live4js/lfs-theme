@@ -37,7 +37,13 @@
 	#top-menu .btn-default { 
 		width:auto;
 	}
-	
+
+	/* Menu */
+	#tabs .navbar-toggle {
+		width: 100%;
+		border-radius: 0px; 
+	}
+
 	#tabs .nav li {
 		float: none; 
 	}
@@ -47,7 +53,7 @@
 	}
 	
 	#tabs li {
-		border-bottom: 1px solid #EEE;
+		border-top: 1px solid #EEE;
 	}
 	
 	#tabs li a {
@@ -75,13 +81,22 @@
 	}
 }
 
+/* only applies while screen is min-width 768px and max-width 980px */
+@media (min-width:768px) and (max-width: 980px) {
+
+}
+
 /* only applies while screen is 980px or greater */
-@media (min-width: 768px) {
+@media (min-width: 980px) {
 	#tabs .nav li {
-		float: left; 
+		float: left;
+	}
+	
+	.categories-portlet #category-nav {
+		display: block !important;
+		height: auto !important; 
 	}
 }
-/* End of "Only applies while screen is 980px or less" */
 
 /* Home 
 --------------------------------*/
@@ -253,12 +268,44 @@
 }
 
 /* Pages */
-.categories-portlet a:hover {
- 	color: #0066BB;
+.pages-portlet ul {
+	margin:0; 
+	padding: 0;
+}
+
+.pages-portlet li {
+	padding: 10px 6px 10px 10px;
+	border-bottom: 1px solid #EEE;
+}
+
+.pages-portlet li:hover {
+	background: #EEEEEE; 
+}
+
+.pages-portlet li a {
+	font-size: 12px; 
+}
+
+.pages-portlet li a:hover {
+ 	color: #0066AA;
+}
+
+.pages-portlet .portlet-body {
+	border-bottom:0px; 
 }
 
 /* Categories */
-.pages-portlet a:hover {
+
+.categories-portlet #category-btn {
+	padding-left:0px;
+	width:100%;
+}
+
+.categories-portlet #category-btn .glyphicon {
+	float: right; 
+}
+
+.categories-portlet a:hover {
  	color: #0066BB;
 }
 

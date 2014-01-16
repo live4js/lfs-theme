@@ -3,10 +3,14 @@
 
 {% if categories %}
     <div class="categories-portlet portlet">
+	<a id="category-btn" data-toggle="collapse" data-parent="#accordion" href="#category-nav">
         <div class="portlet-header">
-            {{ title }}
+            {{ title }} 
+	<span class="glyphicon glyphicon-circle-arrow-down hidden-md hidden-lg"></span>
         </div>
-        <div class="portlet-body">
+	</a>
+
+        <div id="category-nav" class="portlet-body panel-collapse collapse">
             <ul class="root">
                 {% for category in categories %}
                     <li class="level-{{ category.level }} {% if forloop.last %}last{% endif %}">

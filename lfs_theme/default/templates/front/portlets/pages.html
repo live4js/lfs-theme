@@ -5,18 +5,20 @@
             {{ title }}
         </div>
         <div class="portlet-body">
+	<ul>
             {% for page in pages %}
-                <div class="portlet-item {% if forloop.last %}last{% endif %}">
-                    <a href="{{page.get_absolute_url}}">
-                        {{page.title}}
-                    </a>
-                </div>
+                	<li class="{% if forloop.last %}last{% endif %}">
+				<a href="{{page.get_absolute_url}}">
+                        		{{page.title}}
+                    		</a>
+                	</li>
             {% endfor %}
+	</ul>
         </div>
         <div class="portlet-footer">
-            <a href="{% url "lfs_pages" %}">
-                {% trans 'More information' %}
-            </a>
+		<a href="{% url "lfs_pages" %}">
+			{% trans 'More information' %}
+		</a>
         </div>
     </div>
 {% endif %}
