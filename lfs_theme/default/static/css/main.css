@@ -361,6 +361,7 @@ table.search-results {
 	margin-left: -6px;
 	height: 34px;
 	color: #FFFFFF;
+	border-radius: 0 5px 5px 0;
 }
 
 #search-form .btn-default:hover {
@@ -369,7 +370,7 @@ table.search-results {
 }
 
 #search-form .form-control {
-	height: 32px;
+	border-radius: 5px 0 0 5px;
 }
 
 .livesearch-wrapper {
